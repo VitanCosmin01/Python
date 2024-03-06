@@ -78,7 +78,7 @@ from abc import ABC, abstractmethod
 
 
 class AbstractVideo:
-    def __init__(self) -> object:
+    def __init__(self):
         pass
 
     @abstractmethod
