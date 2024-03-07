@@ -243,12 +243,14 @@ Converteste lista la string si afiseaza string-ul. A se vedea metoda join().
 20. Se da lista numere = [1, 2, 3, 4, 56, 22, 5].
 Afiseaza elementul cu valoarea maxima din string. (google- functia max())
 """
-
+numere = [1, 2, 3, 4, 56, 22, 5]
+print(max(numere))
 """
 21. Se da lista preturi = [12.3, 34.5, 22].
 Calculeaza suma elementelor din lista preturi. (google - functia sum())
 """
-
+preturi = [12.3, 34.5, 22]
+print(sum(preturi))
 """
 22. Se da dictionarul:
 sample_dict = {
@@ -263,10 +265,26 @@ c. Sterge varsta din dictionar.
 d. Adauga o noua pereche cheie-valoare in dictionar, cu cheia employment_date. Valoarea o alegi tu.
 e. Verifica daca exista cheia 'country' in dictionar. Daca nu exista, adauga-o.
 """
+sample_dict = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+print(sample_dict["city"])      # a
+sample_dict["salary"] = 10000
+print(sample_dict["salary"])   #  b
+sample_dict.pop("age")
+print(sample_dict)              #  c
+sample_dict.update({"emploiment_date": "15.01.2024"})
+print(sample_dict)              #  d
+print(sample_dict.get("country"))
+sample_dict.update({"country": "Romania"})
+print(sample_dict)              #  e
 
 """
 23. Se da dictionarul:
-sample_dict = {
+sample_dict1 = {
     "name": "Kelly",
     "age": 25,
     "salary": 8000,
@@ -276,7 +294,15 @@ a. Afiseaza toate cheile din dictionar. (HINT: metoda keys())
 b. Afiseaza toate valorile din dictionar. (HINT: metoda values())
 c. Verifica lungimea dictionarului.
 """
-
+sample_dict1 = {
+    "name": "Kelly",
+    "age": 25,
+    "salary": 8000,
+    "city": "New york"
+}
+print(sample_dict1.keys())
+print(sample_dict1.values())
+print(len(sample_dict1))
 """
 24. Gasirea unui element intr-un dictionar
 Se da dictionarul:
@@ -288,6 +314,13 @@ persoana = {
 Utilizatorul introduce cheia cautata.
 Verifica daca aceasta se gaseste sau nu in dictionar.
 """
+persoana = {
+    'nume': 'Alex',
+    'varsta': 25,
+    'oras': 'Bucuresti'
+}
+searched_key = str(input("Introdu cheia cautata: "))
+print(persoana.get(searched_key))
 
 """
 25. Adaugarea unui element intr-un dictionar
@@ -301,7 +334,13 @@ Utilizatorul trebuie sa introduca cheia si valoarea pe care doreste sa
 le adauge in dictionar.
 Foloseste metoda update() (metoda ajutatoare pe dictionar)
 """
-
+persoana1 = {
+    'nume': 'Alex',
+    'varsta': 25,
+    'oras': 'Bucuresti'
+}
+persoana1.update({"inaltime": 171})
+print(persoana1)
 """
 26. Stergerea unui element din dictionar
  Se da dictionarul:
@@ -315,7 +354,11 @@ a. Elimina elementul, verificand prima data daca cheia se afla in dictionar,
 si daca se afla, foloseste metoda del.
 b. Elimina elementul, folosind metoda ajutatoare pop().
 """
-
+del_key = str(input("Elimina cheia: "))
+if persoana1.get(del_key) is not None:
+    print(persoana1)
+    del persoana1[del_key]
+print(persoana1)
 
 # 27. Concatenarea a doua dictionare.
 # Se dau doua dictionare:
@@ -431,12 +474,11 @@ for contact in contacts:
         age = contact[1]
         print(f'{name_1} is {age}')
         break
-    else: print('Not Found') # here is the hell of the code and it took me almost all my day to figure it out
+    else: print('Not Found')   # here is the hell of the code and it took me almost all my day to figure it out
 
 
 
-'''
-'''
+
 # my_string = "python"
 # x = 0
 #

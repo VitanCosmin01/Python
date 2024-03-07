@@ -278,5 +278,4 @@ luna respectivă;
 # mounth = 12
 # print(calendar.month(year, mounth))
 
-class Calendar(yy):
-    yy =
+

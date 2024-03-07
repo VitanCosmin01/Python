@@ -196,5 +196,3 @@ cerc.descriere()
 from abc import ABC, abstractmethod
 
 class Patrat(ABC):
-
-    

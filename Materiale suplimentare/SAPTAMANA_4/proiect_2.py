@@ -23,12 +23,15 @@ class TodoList:
     def adauga_task(self, nume, descriere):
         self.todo[nume] = descriere
 
+
 task = TodoList()
 task.adauga_task('curatenie', 'la ora 10')
 print(task.todo)
 task.adauga_task('cumparaturi', 'la salar')
 print(task.todo)
 ###########################
+
+
 class TodoList:
     def init(self):
         self.todo = {}
@@ -48,6 +51,7 @@ class TodoList:
 
     # def afiseaza_todo_list(self):
     #     print(list(self.todo.keys()))
+
 
 task = TodoList()
 task.adauga_task("curatenie", "la ora 10")

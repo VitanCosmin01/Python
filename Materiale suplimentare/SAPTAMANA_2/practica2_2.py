@@ -1,48 +1,48 @@
-# # # # Exemplu de set neordonat
-# # # fruits = {"apple", "banana", "orange", "grape"}
-# # # print(fruits)
-# # # # Output: {'banana', 'apple', 'orange', 'grape'}
-# # #
+# # # Exemplu de set neordonat
 # # fruits = {"apple", "banana", "orange", "grape"}
 # # print(fruits)
+# # # Output: {'banana', 'apple', 'orange', 'grape'}
 # #
-# # # ADAUGAREA unui element in set
-# #
-# # # adaugarea unui element care nu exista in set
-# # # in momentul adaugarii
-# # fruits.add("watermelon")
-# # fruits.add("Watermelon")
-# # print(fruits)
-# # # fruits.add([1, 2]) # da eroare
-# #
-# # # adaugarea unui element care exista in set
-# # # in momentul adaugarii
-# # fruits.add("apple")
-# # print(fruits)
-# #
-# # # STERGEREA elementelor dintr-un set
-# #
-# # # stergerea unui element specific
-# # fruits.remove("apple")
-# # print(fruits)
-# #
-# # # stergerea unui element care NU exista in set
-# # # fruits.remove("blueberry") # da eroare
-# #
-# # # stergerea unui element aleator
-# # element_sters = fruits.pop()
-# # print(element_sters)
-# # print(fruits)
-# #
-# # # Putem adauga elemente MUTABILE intr-un set?
-# # # fruits.add([1, 2]) # da eroare
-# #
-# # # Cum putem sa eliminam duplicatele dintr-o lista?
-# #
-# # cifre = [0, 0, 1, 2, 3, 2, 1, 4, 5, 5, 5]
-# # cifre_set = set(cifre)
-# # print(cifre_set)
-# # print(list(cifre_set))
+# fruits = {"apple", "banana", "orange", "grape"}
+# print(fruits)
+#
+# # ADAUGAREA unui element in set
+#
+# # adaugarea unui element care nu exista in set
+# # in momentul adaugarii
+# fruits.add("watermelon")
+# fruits.add("Watermelon")
+# print(fruits)
+# # fruits.add([1, 2]) # da eroare
+#
+# # adaugarea unui element care exista in set
+# # in momentul adaugarii
+# fruits.add("apple")
+# print(fruits)
+#
+# # STERGEREA elementelor dintr-un set
+#
+# # stergerea unui element specific
+# fruits.remove("apple")
+# print(fruits)
+#
+# # stergerea unui element care NU exista in set
+# # fruits.remove("blueberry") # da eroare
+#
+# # stergerea unui element aleator
+# element_sters = fruits.pop()
+# print(element_sters)
+# print(fruits)
+#
+# # Putem adauga elemente MUTABILE intr-un set?
+# # fruits.add([1, 2]) # da eroare
+#
+# # Cum putem sa eliminam duplicatele dintr-o lista?
+#
+# cifre = [0, 0, 1, 2, 3, 2, 1, 4, 5, 5, 5]
+# cifre_set = set(cifre)
+# print(cifre_set)
+# print(list(cifre_set))
 #
 # """
 # EX8: Se da setul: my_set = {1, 2, 3, 4}.
@@ -234,15 +234,15 @@ EX3: Afiseaza toate numerele pare pana la 10. 0-10)
 
 my_list = ["produs1", "produs2", "produs3"]
 
-for produs in my_list:
-    print(produs)
+# for produs in my_list:
+#     print(produs)
 
 # vrem sa accesam atat indexul cat si elementul direct
 # dintr-o lista
 
-for i, element in enumerate(my_list):
-    print(i)
-    print(element)
+# for i, element in enumerate(my_list):
+#     print(i)
+#     print(element)
 
 # Cum putem accesa si itera cheile dintr-un dictionar ?
 
@@ -255,22 +255,52 @@ my_dict = {
 # keys()
 # print(my_dict.keys())
 
-for key in my_dict.keys():
-    print(f"key {key}")
+# for key in my_dict.keys():
+#     print(f"key {key}")
 
 # Cum accesam valorile dintr-un dictionar?
 # values()
 
-for value in my_dict.values():
-    print(value)
+# for value in my_dict.values():
+#     print(value)
 
 # Cum accesam atat valorile cat si cheie dintr-un dictionar?
 # items()
 
-for cheie, valoare in my_dict.items():
-    print(f"Cheie {cheie}")
-    print(f"Valoare {valoare}")
+# for cheie, valoare in my_dict.items():
+#     print(f"Cheie {cheie}")
+#     print(f"Valoare {valoare}")
+
+"""
+EX1: Se da numarul x = -5.
+Foloseste un while pentru a afisa numerele negative pornind
+de la -5.
+La final, afiseaza un mesaj ca s-au afisat toate numerele
+negative.
+"""
+
+x = -5
+while x < 0:
+    print(f"{x} este numar impar")
+    x += 2
 
 
+# Exemplul 2 - Afisarea numerelor pozitive
+# x = 8
+# while x > 0:
+#     print(f"Numarul {x} este pozitiv")
+#     x -= 1
+# print("S-a iesit din while")
+# print(f"Dupa while, x are valoarea {x}")
+
+"""
+EX2: Calcularea mediei
+Ne dorim sa cerem utilizatorului sa introduca notele
+luate la examene. 
+Vom lua input-ul de la utilizator, pana
+cand acesta introduce -1.
+In functie de notele luate, trebuie sa calculam media aritmetica
+si sa o afisam.
+"""
 
 

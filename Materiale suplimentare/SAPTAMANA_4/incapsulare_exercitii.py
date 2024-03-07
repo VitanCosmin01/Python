@@ -148,3 +148,7 @@ class Movie(Videoclip):
 
 movie_2 = AbstractVideo()
 print(movie_2.play())
+
+movie_3 = Movie("action", "Bil Hopkins", "Palade and Romica", "Curierul", 180)
+print(Movie.show_details(movie_3))
+

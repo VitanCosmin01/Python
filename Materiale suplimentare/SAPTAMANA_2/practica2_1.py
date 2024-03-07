@@ -202,3 +202,8 @@ del person['salary'] # stergem mai multe key:value deodata
 # stergerea unui perechi cheie:valoare dupa cheie
 person.pop("name")
 # print(person)
+
+products = ["apples", "oranges", "bananas"]
+products[1] = "lime"           # este rescris indexul 1
+print(products)
+print(products[2])
