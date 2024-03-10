@@ -18,6 +18,7 @@ franeaza() - mașina se va opri și va avea viteza 0
 """
 from abc import ABC, abstractmethod
 
+
 class IMasina(ABC):
 
     @abstractmethod
@@ -42,25 +43,24 @@ class IMasina(ABC):
 
 
 class Masina(IMasina):
-    MARCA = 'Dacia' #daca scriem o variabila cu litere mari => nu se va mai schimba
+    MARCA = 'Dacia'  # daca scriem o variabila cu litere mari => nu se va mai schimba
     CULORI_DISPONIBILE = {'negru', 'rosu', 'verde', 'galben', 'albastru'}
 
-    # def __init__(self,  model, viteza_maxima, viteza_actuala = 0, culoare = 'gri', inmatriculata = False, nr_inmatriculare = None):
-    #     self.model = model
+    # def __init__(smodel = model
     #     self.viteza_actuala = viteza_actuala
     #     self.__culoare = culoare
-    #     self.viteza_maxima = viteza_maxima
+    #     self.viteza_maxelf,  model, viteza_maxima, viteza_actuala = 0, culoare = 'gri', inmatriculata = False, nr_inmatriculare = None):
+    #     self.ima = viteza_maxima
     #     self.__inmatriculata = inmatriculata
     #     self.__nr_inmatriculare = nr_inmatriculare
 
     def __init__(self, model, viteza_maxima):
         self.model = model
         self.viteza_actuala = 0
-        self.__culoare = 'gri'
+        self.__culoare = 'gri' 
         self.viteza_maxima = viteza_maxima
         self.__inmatriculata = False
         self.__nr_inmatriculare = None
-
 
 
     def descrie(self):

@@ -7,17 +7,17 @@
 #
 # # my_list[start_pos:end_pos:pas]
 #
-# my_list = ["a", "b", "c"]
+my_list = ["a", "b", "c"]
 #
 # # for
 # for index in range(len(my_list)):
 #     print(my_list[index])
 #
-# # foreach
-# for litera in my_list:
-#     print(litera)
-#
-# result_list = []
+# foreach
+for litera in my_list:
+    print(litera)
+
+result_list = []
 #
 # for number in range(0, 6):
 #     print(number)
@@ -48,15 +48,15 @@
 EX1: Defineste o functie care printeaza, pe rand,
 primele 10 numere (1, 10).
 """
-
+from func import multiply
 #from Sesiunea_3.Sesiunea3_1.func import multiply
 # for number in range(1, 11):
 #     print(number)
-
-
-def get_numbers():
-    for number in range(1, 11):
-        print(number)
+#
+#
+# def get_numbers():
+#     for number in range(1, 11):
+#         print(number)
 
 # def get_numbers_2_5():
 #     for number in range(2, 6):
@@ -65,12 +65,12 @@ def get_numbers():
 
 # get_numbers()
 
-def get_numbers(start, end):
-    for number in range(start, end):
-        print(number)
-
-get_numbers(1, 11)
-get_numbers(2, 6)
+# def get_numbers(start, end):
+#     for number in range(start, end):
+#         print(number)
+#
+# get_numbers(1, 11)
+# get_numbers(2, 6)
 
 # functie cu parametri care nu returneaza nimic
 

@@ -243,14 +243,14 @@ Converteste lista la string si afiseaza string-ul. A se vedea metoda join().
 20. Se da lista numere = [1, 2, 3, 4, 56, 22, 5].
 Afiseaza elementul cu valoarea maxima din string. (google- functia max())
 """
-numere = [1, 2, 3, 4, 56, 22, 5]
-print(max(numere))
+# numere = [1, 2, 3, 4, 56, 22, 5]
+# print(max(numere))
 """
 21. Se da lista preturi = [12.3, 34.5, 22].
 Calculeaza suma elementelor din lista preturi. (google - functia sum())
 """
-preturi = [12.3, 34.5, 22]
-print(sum(preturi))
+# preturi = [12.3, 34.5, 22]
+# print(sum(preturi))
 """
 22. Se da dictionarul:
 sample_dict = {
@@ -271,16 +271,16 @@ sample_dict = {
     "salary": 8000,
     "city": "New york"
 }
-print(sample_dict["city"])      # a
-sample_dict["salary"] = 10000
-print(sample_dict["salary"])   #  b
-sample_dict.pop("age")
-print(sample_dict)              #  c
-sample_dict.update({"emploiment_date": "15.01.2024"})
-print(sample_dict)              #  d
-print(sample_dict.get("country"))
-sample_dict.update({"country": "Romania"})
-print(sample_dict)              #  e
+# print(sample_dict["city"])      # a
+# sample_dict["salary"] = 10000
+# print(sample_dict["salary"])   #  b
+# sample_dict.pop("age")
+# print(sample_dict)              #  c
+# sample_dict.update({"emploiment_date": "15.01.2024"})
+# print(sample_dict)              #  d
+# print(sample_dict.get("country"))
+# sample_dict.update({"country": "Romania"})
+# print(sample_dict)              #  e
 
 """
 23. Se da dictionarul:
@@ -300,9 +300,9 @@ sample_dict1 = {
     "salary": 8000,
     "city": "New york"
 }
-print(sample_dict1.keys())
-print(sample_dict1.values())
-print(len(sample_dict1))
+# print(sample_dict1.keys())
+# print(sample_dict1.values())
+# print(len(sample_dict1))
 """
 24. Gasirea unui element intr-un dictionar
 Se da dictionarul:
@@ -319,8 +319,8 @@ persoana = {
     'varsta': 25,
     'oras': 'Bucuresti'
 }
-searched_key = str(input("Introdu cheia cautata: "))
-print(persoana.get(searched_key))
+# searched_key = str(input("Introdu cheia cautata: "))
+# print(persoana.get(searched_key))
 
 """
 25. Adaugarea unui element intr-un dictionar
@@ -339,8 +339,8 @@ persoana1 = {
     'varsta': 25,
     'oras': 'Bucuresti'
 }
-persoana1.update({"inaltime": 171})
-print(persoana1)
+# persoana1.update({"inaltime": 171})
+# print(persoana1)
 """
 26. Stergerea unui element din dictionar
  Se da dictionarul:
@@ -354,11 +354,11 @@ a. Elimina elementul, verificand prima data daca cheia se afla in dictionar,
 si daca se afla, foloseste metoda del.
 b. Elimina elementul, folosind metoda ajutatoare pop().
 """
-del_key = str(input("Elimina cheia: "))
-if persoana1.get(del_key) is not None:
-    print(persoana1)
-    del persoana1[del_key]
-print(persoana1)
+# del_key = str(input("Elimina cheia: "))
+# if persoana1.get(del_key) is not None:
+#     print(persoana1)
+#     del persoana1[del_key]
+# print(persoana1)
 
 # 27. Concatenarea a doua dictionare.
 # Se dau doua dictionare:
@@ -370,20 +370,20 @@ dict2 = {'c': 3, 'd': 4}
 
 
 
-# 28. Se da urmatoarea lista cu dictionare:
-lista = [{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}]
-# a. Adauga perechea {'c':'3'} in primul dictionar din lista.
-lista[0].update({"c": 3})
-print(lista)
-# b. Adauga un nou dictionar ca element in lista. Adauga-l la final.
-lista.append({"g": 7})
-print(lista)
-# c. Adauga un nou dictionar ca element in lista, la indexul 1.
-lista.insert(1,{"h": 8})
-print(lista)
-# d. Verifica daca in al doilea dictionar din lista se gaseste cheia 'c'.
-lista[1].get("c")
-print(lista)
+# # 28. Se da urmatoarea lista cu dictionare:
+# lista = [{'a': 1, 'b': 2}, {'c': 3, 'd': 4}, {'e': 5, 'f': 6}]
+# # a. Adauga perechea {'c':'3'} in primul dictionar din lista.
+# lista[0].update({"c": 3})
+# print(lista)
+# # b. Adauga un nou dictionar ca element in lista. Adauga-l la final.
+# lista.append({"g": 7})
+# print(lista)
+# # c. Adauga un nou dictionar ca element in lista, la indexul 1.
+# lista.insert(1,{"h": 8})
+# print(lista)
+# # d. Verifica daca in al doilea dictionar din lista se gaseste cheia 'c'.
+# lista[1].get("c")
+# print(lista)
 """
 29.
 Se citeste de la tastatura un numar.
@@ -451,13 +451,13 @@ John is 31
 
 If the contact is not found, the program should output "Not Found".
 '''
-contacts = [
-    ('James', 42),
-    ('Amy', 24),
-    ('John', 31),
-    ('Amanda', 63),
-    ('Bob', 18)
-    ]
+# contacts = [
+#     ('James', 42),
+#     ('Amy', 24),
+#     ('John', 31),
+#     ('Amanda', 63),
+#     ('Bob', 18)
+#     ]
 
 # name = input("Introdu  numele: ")
 # for contact in contacts:
@@ -468,13 +468,13 @@ contacts = [
 #         break
 #     else:
 #         print("Not found")
-name_1 = input()
-for contact in contacts:
-    if contact[0] == name_1:
-        age = contact[1]
-        print(f'{name_1} is {age}')
-        break
-    else: print('Not Found')   # here is the hell of the code and it took me almost all my day to figure it out
+# name_1 = input()
+# for contact in contacts:
+#     if contact[0] == name_1:
+#         age = contact[1]
+#         print(f'{name_1} is {age}')
+#         break
+#     else: print('Not Found')   # here is the hell of the code and it took me almost all my day to figure it out
 
 
 
@@ -505,17 +505,39 @@ while i < 5:
 # print(names)
 
 # Car entity
-class Car:
-    def __init__(self, model,brand, year):
-        self.__details = {
-            'model': model,
-            'brand': brand,
-            'year': year
-        }
-    def get_brand(self):
-        return self.__details['brand']
+# class Car:
+#     def __init__(self, model,brand, year):
+#         self.__details = {
+#             'model': model,
+#             'brand': brand,
+#             'year': year
+#         }
+#     def get_brand(self):
+#         return self.__details['brand']
+#
+# garage = [Car('Model S', 'Tesla', 2020), Car('Corolla','Toyota', 2019)]
+#
+# print(garage[0].get_brand())      # Raspuns: Tesla
 
-garage = [Car('Model S', 'Tesla', 2020), Car('Corolla','Toyota', 2019)]
+"""
+EX2: Calcularea mediei
+Ne dorim sa cerem utilizatorului sa introduca notele
+luate la examene. 
+Vom lua input-ul de la utilizator, pana
+cand acesta introduce -1.
+In functie de notele luate, trebuie sa calculam media aritmetica
+si sa o afisam.
+"""
+nota = int(input("Introdu nota: "))
+list_note = []
+while nota >= 10:
+    list_note.append(nota), nota
+    elif nota == -1:
 
-print(garage[0].get_brand())      # Raspuns: Tesla
+media = sum(list_note) / len(list_note)
+print(media)
+
+
+
+
 

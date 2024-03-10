@@ -5,7 +5,7 @@ a lui 7.
 HINT: for loop + if + break
 Expected Output: 0 7 14 21 28 35 42 49
 """
-# varianta 1
+# # varianta 1
 # result = ('')
 # for numar in range(0, 8):
 #     x = 7 * numar
@@ -34,10 +34,10 @@ Aceasta functie va primi ca parametru o lista.
 Example input: [2, 3, 4]
 Expected output: [4, 9, 16]
 """
-i = [2, 3, 4]
-for i in range(10):
-    i += i**2
-    print(i, end=',')
+# i = [2, 3, 4]
+# for i in range(10):
+#     i += i**2
+#     print(i, end=',')
 
 
 
@@ -55,7 +55,17 @@ Expected output:
 Positive: [1, 2, 5, 3]
 Negative: [-2, -5]
 """
+lista = [1, 2, 5, -2, 3, -5]
+positive = []
+negative = []
+for a in lista:
+    if a > 0:
+        positive.append(a)
+    else:
+        negative.append(a)
 
+print("Positive: ", positive)
+print("Negative: ", negative)
 
 
 """
