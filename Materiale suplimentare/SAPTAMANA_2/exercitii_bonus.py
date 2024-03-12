@@ -528,14 +528,6 @@ cand acesta introduce -1.
 In functie de notele luate, trebuie sa calculam media aritmetica
 si sa o afisam.
 """
-nota = int(input("Introdu nota: "))
-list_note = []
-while nota >= 10:
-    list_note.append(nota), nota
-    elif nota == -1:
-
-media = sum(list_note) / len(list_note)
-print(media)
 
 
 

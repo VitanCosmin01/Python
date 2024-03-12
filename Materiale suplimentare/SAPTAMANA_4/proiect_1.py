@@ -63,33 +63,6 @@ class Masina(IMasina):
         self.__nr_inmatriculare = None
 
 
-    def descrie(self):
-        print(f"Marca: {self.MARCA}, Modelul: {self.model}, V. Maxima: {self.viteza_maxima}")
-        print(f"V. Actuala: {self.viteza_actuala}, Culoarea: {self.culoare}")
-        print(f"Inmatriculata?: {self.inmatriculata}, Nr Imatriculare?: {self.nr_inmatriculare}")
-
-    def inmatriculare(self, nr_inmatriculare):
-        self.__nr_inmatriculare = nr_inmatriculare
-        self.__inmatriculata = True
-
-
-    def vopseste(self, culoare):
-        if culoare in self.CULORI_DISPONIBILE:
-            self.__culoare = culoare
-        else:
-            print("Culoarea NU este dipsonibila")
-
-    def accelereaza(self, viteza):
-        if viteza < 0:
-            print("VIteza nu poate sa fie o valoare NEGATIVA")
-        elif viteza > self.viteza_maxima:
-            self.viteza_actuala = self.viteza_maxima
-        else:
-            self.viteza_actuala = viteza
-
-    def franeaza(self):
-        self.viteza_actuala = 0
-
     @property
     def culoare(self):
         print("Getter culoare")
@@ -104,6 +77,34 @@ class Masina(IMasina):
     def nr_inmatriculare(self):
         print("Geter nr_inmatriculare")
         return self.__nr_inmatriculare
+
+    def descrie(self):
+        print(f"Marca: {self.MARCA}, Modelul: {self.model}, V. Maxima: {self.viteza_maxima}")
+        print(f"V. Actuala: {self.viteza_actuala}, Culoarea: {self.culoare}")
+        print(f"Inmatriculata?: {self.inmatriculata}, Nr Imatriculare?: {self.nr_inmatriculare}")
+
+    def inmatriculare(self, nr_inmatriculare):
+        self.__nr_inmatriculare = nr_inmatriculare
+        self.__inmatriculata = True
+
+    def vopseste(self, culoare):
+        if culoare in self.CULORI_DISPONIBILE:
+            self.__culoare = culoare
+        else:
+            print("Culoarea NU este dipsonibila")
+
+    def accelereaza(self, viteza):
+        if viteza < 0:
+            print("Viteza nu poate sa fie o valoare NEGATIVA")
+        elif viteza > self.viteza_maxima:
+            self.viteza_actuala = self.viteza_maxima
+        else:
+            self.viteza_actuala = viteza
+
+    def franeaza(self):
+        self.viteza_actuala = 0
+
+
 
 
 masina1 = Masina("1300", 100)

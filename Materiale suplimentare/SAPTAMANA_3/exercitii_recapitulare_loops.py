@@ -96,3 +96,14 @@ Expected output: 720
 #     index += 1
 # else:
 #     print("Valoarea nu a fost gasita in lista!")
+"""
+Se da lista2 = [1, 2, 5, -2, 3, -5]. Afiseaza elementele listei in afara de 2 si 3.
+"""
+lista2 = [1, 2, 5, -2, 3, -5]
+lista3 = []
+for i in lista:
+    if i == 2 or i == 3:
+        continue
+    lista3.append(i)
+print(lista2)
+print(lista3)

@@ -17,7 +17,7 @@ afișează_detalii_suplimentare(nume_task) - în funcție de numele taskului, pr
 
 
 class TodoList:
-    def init(self):
+    def __init__(self):
         self.todo = {}
 
     def adauga_task(self, nume, descriere):
@@ -29,11 +29,12 @@ task.adauga_task('curatenie', 'la ora 10')
 print(task.todo)
 task.adauga_task('cumparaturi', 'la salar')
 print(task.todo)
+print("______________________________________ ")
 ###########################
 
 
 class TodoList:
-    def init(self):
+    def __init__(self):
         self.todo = {}
 
     def adauga_task(self, nume, descriere):
@@ -46,11 +47,11 @@ class TodoList:
             print("nu a sters")
 
     def afiseaza_todo_list(self):
-        for asd in self.todo.keys():
-            print(asd)
+        for key in self.todo.keys():
+            print(key)
 
-    # def afiseaza_todo_list(self):
-    #     print(list(self.todo.keys()))
+    def afiseaza_todo_list1(self):           # varianta recomandata output o lista []
+        print(list(self.todo.keys()))
 
 
 task = TodoList()
@@ -63,5 +64,8 @@ print(task.todo)
 task.finalizeaza_task("bani")
 print(task.todo)
 task.adauga_task("sedinta", "strada_primaverii")
-task.adauga_task("zii de nastere", "la_george")
-task.afiseaza_todo_list()
+task.adauga_task("zi de nastere", "la_george")
+task.adauga_task("congres", "departe")
+print(task.todo)
+task.afiseaza_todo_list1()
+#task.afiseaza_todo_list()
