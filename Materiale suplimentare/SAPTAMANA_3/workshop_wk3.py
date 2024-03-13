@@ -107,6 +107,7 @@ def item_count(my_list):
 
     return dicti
 
+
 print(item_count([1, 3, 1, 5, 9, 7, 7, 5, 5]))
 
 

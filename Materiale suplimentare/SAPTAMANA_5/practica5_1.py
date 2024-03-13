@@ -15,71 +15,73 @@ class SingletonClass:
             cls.__instance = object.__new__(cls)
 
         return cls.__instance
-#
-# obj1 = SingletonClass("JavaScript")
-# print(obj1.name)
-# print(obj1.sector)
-# print(obj1)
-# print(id(obj1))
-#
-# obj2 = SingletonClass("Python")
-# print(obj2.name)
-# print(obj2.sector)
-# print(obj2)
-# print(id(obj2))
-# print(obj1.name)
+
+
+obj1 = SingletonClass("JavaScript")
+print(obj1.name)
+print(obj1.sector)
+print(obj1)
+print(id(obj1))
+
+obj2 = SingletonClass("Python")
+print(obj2.name)
+print(obj2.sector)
+print(obj2)
+print(id(obj2))
+print(obj1.name)    # instanta se suprascrie dar locatia in memorie ramane aceeasi
 
 # Structural Design Pattern: PROXY DP
 
-# from abc import ABC, abstractmethod
-#
-#
-# class AbstractCar(ABC):
-#
-#     @abstractmethod
-#     def drive(self):
-#         pass
-#
-#
-# class Car(AbstractCar):
-#     def drive(self):
-#         print("You are driving the car.")
-#
-#
-# class Driver:
-#     def __init__(self, age):
-#         self.age = age
-#
-#
-# class ProxyCar(AbstractCar):
-#     def __init__(self, driver: Driver):
-#         self.car = Car()
-#         self.driver = driver
-#
-#     def drive(self):
-#         if self.driver.age < 18:
-#             print("Sorry little driver, you are too young to drive.")
-#         else:
-#             self.car.drive()
+from abc import ABC, abstractmethod
 
 
-# driver = Driver(16)
-# print(driver.age)
+class AbstractCar(ABC):
+
+    @abstractmethod
+    def drive(self):
+        pass
+
+
+class Car(AbstractCar):
+    def drive(self):
+        print("You are driving the car.")
+
+
+class Driver:
+    def __init__(self, age):
+        self.age = age
+
+
+class ProxyCar(AbstractCar):
+    def __init__(self, driver: Driver):
+        self.car = Car()
+        self.driver = driver
+
+    def drive(self):
+        if self.driver.age < 18:
+            print("Sorry little driver, you are too young to drive.")
+        else:
+            self.car.drive()
+
+
+driver = Driver(16)
+print(driver.age)
 # Daca instantiem direct clasa Car,
 # nu avem constrangere asupra varstei
-# car = Car()
-# car.drive()
+car = Car()
+car.drive()
 
 # Asa ca nu instantiem direct Car, ci instantiem ProxyCar,
 # aceasta verificand varsta soferului
-# proxy_car = ProxyCar(driver)
-# proxy_car.drive()
-#
-# new_driver = Driver(20)
-# proxy_car = ProxyCar(new_driver)
-# proxy_car.drive()
+proxy_car = ProxyCar(driver)
+proxy_car.drive()
+
+new_driver = Driver(20)
+proxy_car = ProxyCar(new_driver)
+proxy_car.drive()
 
 # BEHAVIOURAL DP - OBSERVER DP
+
 
 class ObservablePerson:
     name = "Default User"
@@ -120,10 +122,12 @@ observer_obj2 = Observer("obs2", subject)
 # in momentul apelului ambele obiecte observer primesc notificare
 subject.notify_observers("An event occured....")
 
+
 class A:
 
     def __str__(self):
         return "I am object A"
+
 
 obj_a = A()
 print(obj_a)

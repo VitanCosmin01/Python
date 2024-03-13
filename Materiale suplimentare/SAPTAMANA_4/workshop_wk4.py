@@ -8,7 +8,8 @@ Exerciții - studiu în workshopul de weekend
 Clasa abstractă FormaGeometrica
 Conține un field PI=3.14
 Conține o metodă abstractă aria (opțional)
-Conține o metodă a clasei descrie() - aceasta printează pe ecran ‘Cel mai probabil am colturi’
+Conține o metodă a clasei descrie() - aceasta printează pe ecran
+‘Cel mai probabil am colturi’
 """
 from abc import ABC, abstractmethod
 
@@ -21,7 +22,7 @@ class FormaGeometrica(ABC):
         pass
 
     def descrie(self):
-        print("Cel mai probabil am colturi")
+        print("Cel mai probabil am colturi.")
 
 
 """
@@ -42,7 +43,7 @@ class Patrat(FormaGeometrica):
         self.__latura = latura
 
     def aria(self):
-        pass
+        return f'Aria patratului este egala cu {self.__latura**2}.'
 
     @property
     def latura(self):
@@ -79,7 +80,10 @@ class Cerc(FormaGeometrica):
         self.__raza = raza
 
     def aria(self):
-        pass
+        print(f'Aria cercului este: {self.PI * self.__raza}.')
+
+    def descrie(self):
+        print("Eu nu am colturi!")
 
     @property
     def raza(self):
@@ -97,7 +101,7 @@ class Cerc(FormaGeometrica):
 
     @raza.deleter
     def raza(self):
-        print('Deleter: Am sters valoarea razei')
+        print('Deleter: Am sters valoarea razei!')
         self.__raza = 0
 
 
@@ -107,7 +111,9 @@ Creează un obiect de tip Cerc și joacă-te cu metodele lui
 """
 
 
-patrat1 = Patrat(5)                # instantiat un obiect si setat o valoare pentru latura
+patrat1 = Patrat(5)     # instantiat un obiect si setat o valoare pentru latura
+patrat1.descrie()
+print(patrat1.aria())
 print(patrat1.latura)              # accesat latura pe obiect
 
 patrat1.latura = 8                  # setter
@@ -116,7 +122,9 @@ print(patrat1.latura)
 del patrat1.latura                  # deleter
 print(patrat1.latura)
 
-cerc1 = Cerc(9)
-print(cerc1.raza)
-
+cerc1 = Cerc(10)
+cerc1.raza()         # imi da eroare si nu stiu sa o rezolv
+cerc1.aria()
+cerc1.descrie()
+del cerc1.raza
 

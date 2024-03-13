@@ -233,12 +233,14 @@ Daca nu, afiseaza mesajul "Iti recomandam rosiile de asemenea".
 Converteste lista la string si afiseaza string-ul. A se vedea metoda join(). 
 (search on google)
 """
-# fructe = ['capsuni', 'mere', 'lamai']
-# str = str   (fructe)
-# print(help(list))
+fructe = ['capsuni', 'mere', 'lamai']
+str = str(fructe)
+print(str)
+str.join(fructe)
+print(str)
 
 
-#print(dir.join)
+
 """
 20. Se da lista numere = [1, 2, 3, 4, 56, 22, 5].
 Afiseaza elementul cu valoarea maxima din string. (google- functia max())
@@ -528,8 +530,16 @@ cand acesta introduce -1.
 In functie de notele luate, trebuie sa calculam media aritmetica
 si sa o afisam.
 """
-
-
-
-
+list_of_notes = []
+while True:
+    nota = float(input("Introdu notele: "))
+    list_of_notes.append(nota)
+    print(list_of_notes)
+    if nota == -1:
+        break
+# print(list_of_notes)
+media = sum(list_of_notes[:-1]) / len(list_of_notes[:-1])
+print(sum(list_of_notes[:-1]))
+print(len(list_of_notes[:-1]))
+print(media)
 
