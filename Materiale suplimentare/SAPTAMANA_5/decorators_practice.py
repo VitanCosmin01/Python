@@ -39,10 +39,6 @@ hello()
 # Daca aplicam decoratorul pe functia de mai jos, va functiona?
 
 
-
-
-
-
 def decorator_salut(original_func):
     def wrapper_func(*args, **kwargs):
         print(f"Am intrat in functia {original_func.__name__}")
@@ -53,8 +49,14 @@ def decorator_salut(original_func):
 
     return wrapper_func
 
+
 @decorator_salut
 def salut(name):
     print(f"Salut, {name}")
 
+
 salut("Ana")
+
+
+
+

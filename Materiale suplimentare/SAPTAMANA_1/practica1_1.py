@@ -158,21 +158,24 @@ info = 'Afara sunt 2 grade'
 # print(info[0]) # => 'A' (primul caracter din string se afla la indexul 0)
 # print(info[1]) # => 'f'
 # print(info[5]) # => ' ' (la indexul 5 avem un spatiu gol)
-# print(info[:7]) #=> 'Afara s'  afiseaza de la inceput pana la al 7 lea caracter inclusiv
-# print(info[::-1]) #=>'edarg 2 tnus arafA' -slicing  (afiseaza tot stringul inversat)
-# print(info[::-2])  #=> 'eag2tu rf'  -slicing(afiseaza stringul inversat din doi in doi)
-# print(info[-1])  #=> 'e'   - afiseaza ultimul caracter
-print(info[7:])  #=>  'unt 2 grade'  - afiseaza de la al 8 lea caracter
+# print(info[:7]) # => 'Afara s'  afiseaza de la inceput pana la al 7 lea caracter inclusiv
+# print(info[::-1]) # =>'edarg 2 tnus arafA' -slicing  (afiseaza tot stringul inversat)
+# print(info[::-2])  # => 'eag2tu rf'  -slicing(afiseaza stringul inversat din doi in doi)
+# print(info[-1])  # => 'e'   - afiseaza ultimul caracter
+print(info[7:])  # =>  'unt 2 grade'  - afiseaza de la al 8 lea caracter
 
 info = 'afara sunt 2  grade'
 
 # afisam lungimea string-ului info
-#print(len(info)) # => 18
+# print(len(info)) # => 18
 print(info.count('a'))
 print(info.count('r'))
 print(info.find('a'))
 print(info.capitalize())
 print(info.upper())
-print(info.endswith('e'))  #=> afiseaza True sau Fals daca stringul  se termina in litera specificata
-print(info.replace('2','3'))  #=>  inlocuieste un caracter cu un altul specificat
+print(info.endswith('e'))  # => afiseaza True sau Fals daca stringul  se termina in litera specificata
+print(info.replace('2', '3'))   # =>  inlocuieste un caracter cu un altul specificat
 print(info.strip())
+
+
+

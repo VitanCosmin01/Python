@@ -15,8 +15,6 @@
 
 
 
-
-
 #3. Funcție care returnează numărul total de caractere din numele tău complet.
 #(nume, prenume, nume_mijlociu)
 
@@ -48,9 +46,6 @@
 #      return a * b
 #
 # print(f'Aria este {aria(10, 20)}')
-
-
-
 
 
 # 5. Funcție care returnează aria cercului

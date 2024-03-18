@@ -1,6 +1,8 @@
 
 #
-# descriere_masina = "Masina aleasa costa 20 000 euro si se poate achita in rate!”. descriere_masina = “Masina aleasa costa 20 000 euro si se poate achita in rate!"
+# descriere_masina = "Masina aleasa costa 20 000 euro si se poate achita
+# in rate!”. descriere_masina = “Masina aleasa costa 20 000 euro si se poate
+# achita in rate!"
 #
 # print(descriere_masina[:5])
 # print(descriere_masina[-5:])
@@ -169,9 +171,9 @@ person['salary'] = 3000.00
 # print(person)
 
 # v2
-person.update({"has_car": True}) # cream perechea cheie-valoare
+person.update({"has_car": True})   # cream perechea cheie-valoare
 # print(person)
-person.update({"has_car": False}) # actualizam perechea cheie-valoare
+person.update({"has_car": False})  # actualizam perechea cheie-valoare
 # print(person)
 
 person.update({
@@ -195,7 +197,7 @@ person.update({"age": 32})
 del person['city']
 if person.get("city", False):
     del person["city"]
-del person['salary'] # stergem mai multe key:value deodata
+del person['salary']     # stergem mai multe key:value deodata
 # print(person)
 
 # v2
@@ -207,3 +209,16 @@ products = ["apples", "oranges", "bananas"]
 products[1] = "lime"           # este rescris indexul 1
 print(products)
 print(products[2])
+
+"""
+Se dau două numere naturale cu cel mult 4 cifre fiecare. Se cere să se 
+verifice dacă primul număr se împarte exact la al doilea (se va afişa DA sau NU).
+Exemplu: dacă se citesc numerele 101 şi 30 se va afişa NU.
+"""
+a = int(input("a = "))
+b = int(input("b = "))
+if a % b == 0:
+    print("DA")
+else:
+    print("NU")
+

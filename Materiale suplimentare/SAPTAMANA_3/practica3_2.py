@@ -85,8 +85,8 @@ class Car:
 
     # metoda de initializare/constructor
     def __init__(self, m, c):
-        self.model = m # atribut al obiectului
-        self.color = c # atribut al obiectului
+        self.model = m    # atribut al obiectului
+        self.color = c    # atribut al obiectului
 
 
 car1 = Car('Duster', 'white') # positional args
@@ -110,10 +110,12 @@ print(car1.color)
 def multiply(a, b=2):
     return a * b
 
+
 print(multiply(1, 5))
 print(multiply(4))
 
 # clase
+
 
 class Employee:
 
@@ -125,6 +127,7 @@ class Employee:
     def describe(self):
         print(f"{self.name} lucreaza la aceasta companie de {self.working_experience} ani.")
 
+
 employee1 = Employee("Ana",30,5)
 employee1.describe()
 
@@ -134,11 +137,13 @@ student1.working_experience = 2
 print(student1.working_experience)
 student1.describe()
 
+
 class Complex:
 
     def __init__(self, real, imag):
         self.r = real
         self.i = imag
+
 
 z = Complex(3.0, -4.5)
 
@@ -153,3 +158,68 @@ print(calc1.inmultire())
 
 calc2 = Calculator(a=20, b=0)
 print(calc2.impartire())
+
+"""
+EX:
+a. Defineste o clasa noua Dog.
+b. Obiectele de tip Dog vor avea obligatoriu 2 atribute:
+name si age.
+c. Creeaza doua obiecte de tip clasa Dog, acceseaza atributele
+si afiseaza-le.
+d. Schimba atributul nume pentru unul din obiecte
+si afiseaza-l din nou.
+e. Creaza o metoda description, care returneaza
+mesajul '{nume} is {age} years old'.
+f. Folosind unul din obiectele instantiate la exercitiul
+apeleaza metoda description, salveaza rezultatul
+intr-o variabila si afiseaza variabila.
+g. Clasa Dog este caracterizata si de atributul rasa.
+Adauga acest atribut ca si un atribut al clasei (nu al obiectului)
+h. Adauga o noua metoda in clasa Dog, numita speak,
+care ia un parametru numit sound.
+Metoda trebuie sa returneze mesajul "<name> says <sound>."
+i. Apeleaza metoda speak pe unul din obiecte si afiseaza
+rezultatul.
+"""
+
+
+# a
+class Dog:
+    # g
+    rasa = "Bischon"
+    sound = "ham-ham"
+
+    # b
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    # e
+    def description(self):
+        print(f'{self.name} is {self.age} years old!')
+
+    # h
+    def speak(self, sound):
+        self.sound = sound
+        return f'{self.name} says {self.sound}!'
+
+
+# c
+dog_1 = Dog("Gogu", 3)
+dog_2 = Dog("Aysha", 2)
+print(dog_1.sound)    # se accesează atributul de pe clasa
+print(dog_1.rasa)
+
+print(dog_1.name, dog_1.age)    # se accesează atributul din constructor
+print(dog_2.name, dog_2.age)
+# d
+dog_1.name = "Goguta"
+print(dog_1.name)
+
+# f
+dog_1.description()           # se accesează metodele
+# i
+print(dog_1.speak("ham-ham"))
+
+# del dog_1    #    del sterge obiectul creat
+print(dog_1.name)

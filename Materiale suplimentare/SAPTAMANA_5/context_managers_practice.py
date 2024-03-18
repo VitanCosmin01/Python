@@ -19,7 +19,7 @@
 
 # VARIANTA 1:
 # - ne folosim de blocul try except + finally
-# f = open('my_first_file.txt', 'r')
+f = open('my_first_file.txt', 'r')
 # try:
 #     print(f.read())
 #     if aaaaa:
@@ -59,3 +59,4 @@ with File('my_first_file.txt', 'r') as file:
     print(file.read())
 
 print("here")
+

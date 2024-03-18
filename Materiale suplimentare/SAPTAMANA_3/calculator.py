@@ -9,6 +9,7 @@ atributele a si b
     -- impartire
 """
 
+
 class Calculator:
 
     # metoda de initializare / constructor
@@ -32,3 +33,7 @@ class Calculator:
             return "Nu se poate sa facem impartirea la 0 !!!"
         finally:
             return "S-a terminat operatia de impartire!"
+
+
+op1 = Calculator(7, 9).scadere()
+print(op1)
