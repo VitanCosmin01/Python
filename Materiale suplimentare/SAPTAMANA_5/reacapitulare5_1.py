@@ -1,6 +1,7 @@
 class forma_geometrica:
     pass
 
+
 f1 = forma_geometrica()
 
 
@@ -8,8 +9,8 @@ class A:
 
     def __init__(self, param1):
         self.param1 = param1
-        self._key1 = 0 # atribut protected
-        self.__key2 = 0 # atribut private
+        self._key1 = 0    # atribut protected
+        self.__key2 = 0   # atribut private
 
     def metoda_1(self):
         print("Metoda 1")
@@ -28,12 +29,14 @@ class B(A):
         print("Metoda 2")
         # super().metoda_1()
 
+
 obj_a = A(param1="param1")
 obj_a.metoda_1()
 print(obj_a._key1)
 # print(obj_a.__key2)
 obj_b = B(param1="param1", param2="param2")
 obj_b.metoda_1()
+
 
 class Dreptunghi:
 
@@ -48,6 +51,7 @@ class Dreptunghi:
         arie = self.__calculeaza_arie()
         print(f"aria este {arie}")
 
+
 dreptunghi1 = Dreptunghi(2, 3)
 dreptunghi1.afiseaza_arie()
 # dreptunghi1.__calculeaza_arie() # da eroare
@@ -58,8 +62,10 @@ dreptunghi1.afiseaza_arie()
 # func1(5)
 # print(num)
 
+
 def func1(name, age=20):
     print(name, age)
+
 
 func1("Emma", 25)
 func1("Emma") # Emma 20
@@ -74,6 +80,7 @@ def func2():
     finally:
         return "3"
 
+
 print(func2())
 
 
@@ -85,15 +92,18 @@ class Animal:
     def eat(self):
         return 'The animal is eating'
 
+
 class Dog(Animal):
 
     def eat(self):
         return 'The dog is eating'
 
+
 class Cat(Animal):
 
     def eat(self):
         return 'The cat is eating'
+
 
 class Bird(Animal):
 

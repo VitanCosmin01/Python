@@ -83,6 +83,7 @@ txt = "We are the so-called \"Vikings\" from the north."
 print(txt)
 #############################
 
+
 class Person:
     def __init__(self, name, age):            # constructorul __init__
         self.name = name
@@ -99,6 +100,7 @@ class Person:
 
     def greet(self):
         print(f'Salut {self.name}, cu varsta {self.age}')
+
 
 p1 = Person("Raul", 23)
 print(p1)

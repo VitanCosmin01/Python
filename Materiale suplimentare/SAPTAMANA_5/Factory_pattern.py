@@ -20,6 +20,8 @@ localize va fi o funcție care pentru un parametru de intrare, ne va da traducer
 TranslatorFactory – clasa care are o singura metoda (preferabil statica sau de clasa) numita get_translator(language) – in functie de parametrul language, returnează un translator object.
 
 '''
+
+
 class FrenchLocalizer:
 
     def __init__(self):
@@ -54,7 +56,7 @@ class EnglishLocalizer:
         return msgy
 
 
-def factory(language = "English"):
+def factory(language="English"):
 
     localizers = {
         "French": FrenchLocalizer,

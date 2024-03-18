@@ -22,9 +22,9 @@ lst = ['a', 'b', 'c']
 # - metoda __iter__
 # - metoda __next__
 
-nums = [1, 2, 3] # este un ITERABIL, pentru ca are
+nums = [1, 2, 3]        # este un ITERABIL, pentru ca are
 # implementata metoda __iter__
-i_nums = iter(nums) # este un ITERATOR
+i_nums = iter(nums)     # este un ITERATOR
 # i_nums.__iter__() <-> iter(i_nums)
 # i_nums.__next__() <-> next(i_nums)
 # print(i_nums)
@@ -41,16 +41,16 @@ si sa aiba acelasi comportament ca si functia range
 din Python.
 """
 
-range(1, 5) # -> 1, 2, 3, 4
-range(3, 6) # -> 3, 4, 5
+range(1, 5)    # -> 1, 2, 3, 4
+range(3, 6)    # -> 3, 4, 5
 
-# for x in range(1, 5):
-#     print(x)
-#
-# print("============")
+for x in range(1, 5):
+    print(x)
 
-# for x in range(3, 6):
-#     print(x)
+print("============")
+
+for x in range(3, 6):
+    print(x)
 
 # REZULTAT DORIT:
 
@@ -64,8 +64,8 @@ range(3, 6) # -> 3, 4, 5
 class MyRangeClass:
 
     def __init__(self, start, end):
-        self.value = start # 1 2 3 4
-        self.end = end # 4
+        self.value = start    # 1 2 3 4
+        self.end = end        # 4
 
     # facem clasa sa fie iterabila
     def __iter__(self):
@@ -83,22 +83,24 @@ class MyRangeClass:
             # 3. daca 3 >= 4
             # 4. daca 4 >= 4
             raise StopIteration
-        current_value = self.value # 1 2 3
-        self.value += 1 # 2 3 4
+        current_value = self.value  # 1 2 3
+        self.value += 1             # 2 3 4
         return current_value
 
-# nums = MyRangeClass(1, 10)
-# for num in nums:
-#     print(num)
-#
-# for number in MyRangeClass(1, 4):
-#     print(number)
+
+nums = MyRangeClass(1, 10)
+for num in nums:
+    print(num)
+
+for number in MyRangeClass(1, 4):
+    print(number)
 
 # 1
 # 2
 # 3
 
 # GENERATORI
+
 
 def my_gen():
     n = 1
@@ -114,6 +116,7 @@ def my_gen():
     n += 1
     print('This is printed at last')
     yield n
+
 
 # for number in my_gen():
 #     print(number)
