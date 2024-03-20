@@ -29,6 +29,7 @@ noroc_num = tuple(noroc_generator())
 print("loteria 6/49")
 print(lottery_num)
 
+
 print("noroc num")
 print(noroc_num)
 

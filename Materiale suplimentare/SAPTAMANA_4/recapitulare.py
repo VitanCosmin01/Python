@@ -25,3 +25,4 @@ class CarABC(ABC):
 
     def accelerate(self):
         return 50
+    

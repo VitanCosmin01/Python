@@ -7,7 +7,7 @@
 # print(f'In spaniola zicem {spanish_trans.localize("masina")}')
 #
 # def Factory(cls,):
-'''
+"""
 Factory Pattern
 Acest pattern ne permite sa creăm un obiect dintr-o clasa folosind o alta clasa (fabrica). Fabrica are posibilitatea de a crea obiecte din mai multe clase (de obicei aceste clase sunt siblings, adica mostenesc de la acelasi parinte).
 
@@ -19,7 +19,7 @@ localize va fi o funcție care pentru un parametru de intrare, ne va da traducer
 
 TranslatorFactory – clasa care are o singura metoda (preferabil statica sau de clasa) numita get_translator(language) – in functie de parametrul language, returnează un translator object.
 
-'''
+"""
 
 
 class FrenchLocalizer:

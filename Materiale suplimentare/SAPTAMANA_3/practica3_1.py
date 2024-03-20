@@ -161,8 +161,8 @@ print(raspuns2)
 raspuns3 = is_natural(2.5)
 print(raspuns3)
 
-raspuns4 = is_natural("abc")   # da eroare: TypeError
-print(raspuns4)
+# raspuns4 = is_natural("abc")   # da eroare: TypeError
+# print(raspuns4)
 
 """
 EX8: Scrie o functie care ia ca parametru un numar intreg
@@ -171,3 +171,19 @@ si False daca numarul e impar.
 """
 
 print(multiply(2, 4))
+
+
+ages = [25, 36, 33, 19, 56]
+s_ages = sorted(ages, reverse=True)
+print(s_ages)        # => [56, 36, 33, 25, 19]
+print(s_ages[::3])   # => [56, 25] pasul este egal cu 3
+print(s_ages[0:3])   # => [56, 36, 33]
+
+
+
+
+
+
+
+
+

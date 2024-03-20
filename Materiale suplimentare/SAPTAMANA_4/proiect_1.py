@@ -62,7 +62,6 @@ class Masina(IMasina):
         self.__inmatriculata = False
         self.__nr_inmatriculare = None
 
-
     @property
     def culoare(self):
         print("Getter culoare")
@@ -103,8 +102,6 @@ class Masina(IMasina):
 
     def franeaza(self):
         self.viteza_actuala = 0
-
-
 
 
 masina1 = Masina("1300", 100)
