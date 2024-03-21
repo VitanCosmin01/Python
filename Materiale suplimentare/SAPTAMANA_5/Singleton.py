@@ -1,4 +1,4 @@
-'''
+"""
 Singleton
 Se da următoarea clasa:
 
@@ -25,7 +25,8 @@ Vom folosi functia `__new__` (adevăratul constructor din Python)
 Vom tine singurul obiect pe clasa (cls), și îl vom crea doar la prima apelare a lui __new__
 La orice alta apelare, vom returna obiectul deja existent
 
-'''
+"""
+
 
 class PresedinteRomania:
 
@@ -34,6 +35,7 @@ class PresedinteRomania:
 
     def say_hello(self):
         return f'Salut! {self}'
+
 
 a = PresedinteRomania()
 b = PresedinteRomania()
@@ -46,19 +48,22 @@ print(f'Acelasi obiect? {a is b}')
 
 instance = None
 
+
 def __new__(cls, *args):
     if not hasattr(cls, "instance"):                            #de folosit hasattr cat mai mult
-            cls.instance = super().__new__(cls, *args)
+        cls.instance = super().__new__(cls, *args)
     return cls.instance
 
-#varianta 2
+#  varianta 2
 
 instance = None
+
 
 def __new__(cls, *args):
     if not hasattr(cls, "instance"):
             cls.instance = super().__new__(cls, *args)
     return cls.instance
+
 
 # varianta 3
 class PresidentOfRomania:
@@ -66,7 +71,7 @@ class PresidentOfRomania:
 
     def new(cls, args):
         if not hasattr(cls, "instance"):
-            cls.instance = super().new(cls,args)
+            cls.instance = super().new(cls, args)
         return cls.instance
 
     def str(self):

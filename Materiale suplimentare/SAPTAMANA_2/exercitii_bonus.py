@@ -3,7 +3,7 @@
 o variabila de tip string este un sur de caractere delimitat de ghilimele simple sau duble
 si este ordonat si imutabil.
 """
-from colorama import Fore
+
 
 """
 2. Defineste 3 variabile: oras, strada si nr.
@@ -543,3 +543,20 @@ print(sum(list_of_notes[:-1]))
 print(len(list_of_notes[:-1]))
 print(media)
 
+
+
+nums = [x for x in range(0, 51, 5)]
+print(nums)
+
+# string-ul este iterabil
+text = "Hello World"
+for x in text.upper():
+    print(x)
+# 2-a varianta
+
+text1 = [x.upper() + "#" for x in text]
+print(text1)
+
+sports = ["Football", "Basketball", "Tennis", "Golf", "Voleyball"]
+group = [x for x in sports if "ball" in x]
+print(group)
