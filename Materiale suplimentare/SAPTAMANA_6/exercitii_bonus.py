@@ -140,7 +140,6 @@ restaurant.print_menu()
 restaurant.reserve_table(5)
 restaurant.print_booked_tables()
 
-
 """
 3. Clasa BankAccount
 
@@ -155,17 +154,6 @@ restaurant.print_booked_tables()
     -- check_balance
 """
 
-"""
-4. Implementeaza un decorator care converteste rezultatul returnat de
-o functie la int. Daca conversia nu se poate face, trebuie afisat
-un mesaj sugestiv ca nu s-a facut conversia (hint: foloseste-te de
-try-except in implementarea decoratorului)
-"""
-
-"""
-5. Implementeaza un decorator ce limiteaza call-ul functiei decorate la 3.
-"""
-
 
 class BankAccount:
     def __init__(self, account_number, balance, customer_name):
@@ -173,20 +161,107 @@ class BankAccount:
         self.balance = balance
         self.customer_name = customer_name
 
+    def __str__(self):
+        return f'{self.account_number}, {self.balance}, {self.customer_name}'
+
     def withdraw(self, valoarea_retrasa):
         if self.balance >= valoarea_retrasa:
-            print(f'Retragerea sumei de {valoarea_retrasa} încheiata cu succes!')
+            print(f'Retragerea sumei de {valoarea_retrasa} RON încheiata cu succes!')
+            self.balance = self.balance - valoarea_retrasa
             print(f'Suma rămasa in cont este: {self.balance} Ron')
         else:
-            print('')
+            print('Valoarea este mai mare decat balanta! Incercati o valoare mai mica!')
 
-    def deposit(self):
-        pass
+    def deposit(self, valoarea_depusa):
+        self.balance = self.balance + valoarea_depusa
+        print(f'Valoarea depusa este {valoarea_depusa} RON!')
+        print(f'Valoarea totala a contului este {self.balance} RON!')
 
     def check_balance(self):
-        pass
+        print(f'Balanta actuala este {self.balance} RON !')
 
 
+count1 = BankAccount(112233, 5000, "Vitan Cosmin")
+print(count1)
+count1.withdraw(500)
+count1.deposit(1500)
+count1.check_balance()
+# Example usage
+if __name__ == "__main__":
+    account = BankAccount(112233, 6000, "Vitan Cosmin")
+    account.deposit(1000)
+    account.withdraw(200)
+    account.check_balance()
+"""
+4. Implementeaza un decorator care converteste rezultatul returnat de
+o functie la int. Daca conversia nu se poate face, trebuie afisat
+un mesaj sugestiv ca nu s-a facut conversia (hint: foloseste-te de
+try-except in implementarea decoratorului)
+"""
+
+
+def int_converter(func):
+    """
+    Decorator care convertește rezultatul unei funcții la un număr întreg.
+    Dacă conversia eșuează, se afișează un mesaj.
+    """
+    def wrapper(*args, **kwargs):
+        try:
+            result = func(*args, **kwargs)
+            int_result = int(result)
+            return int_result
+        except ValueError:
+            print(f"Conversia la întreg a eșuat pentru rezultatul: {result}")
+            return None
+
+    return wrapper
+
+
+# Exemplu de utilizare a decoratorului
+@int_converter
+def divide(a, b):
+    return a / b
+
+
+# Testează funcția decorată
+result = divide(10, 3)
+print(f"Rezultat după conversie: {result}")
+
+"""
+5. Implementeaza un decorator ce limiteaza call-ul functiei decorate la 3.
+"""
+
+
+def limit_calls(max_calls):
+    """
+    Decorator care limitează numărul de apeluri la funcția decorată.
+    :param max_calls: Numărul maxim de apeluri permise.
+    """
+
+    def decorator(func):
+        def wrapper(*args, **kwargs):
+            if wrapper.call_count < max_calls:
+                wrapper.call_count += 1
+                return func(*args, **kwargs)
+            else:
+                raise ValueError(f"Funcția {func.__name__} a atins numărul maxim de apeluri permise.")
+
+        wrapper.call_count = 0
+        return wrapper
+
+    return decorator
+
+
+# Exemplu de utilizare
+@limit_calls(max_calls=5)
+def salut(nume):
+    print(f"Salut, {nume}!")
+
+
+salut("Alice")  # Apel 1
+salut("Bob")  # Apel 2
+salut("Charlie")  # Apel 3
+salut("David")  # Ridică o excepție ValueError
 """
 Pentru alte exercitii extra:
 - https://www.geeksforgeeks.org/python-exercises-practice-questions-and-solutions/
@@ -194,3 +269,19 @@ Pentru alte exercitii extra:
 - https://www.w3schools.com/python/python_exercises.asp
 - https://exercism.org/tracks/python/exercises
 """
+
+
+def my_first_decorator(function_as_parameter):
+    def wrapper_func(*args, **kwargs):
+        print(f'Am intrat in functia {function_as_parameter.__name__}!!!')
+        function_as_parameter(*args, **kwargs)
+        print(f'Am iesit din functia {function_as_parameter.__name__}!!!')
+    return wrapper_func
+
+
+@my_first_decorator
+def need_decorator(nume="Cosmin"):
+    print(f'Hello my brother {nume} !')
+
+
+need_decorator()
