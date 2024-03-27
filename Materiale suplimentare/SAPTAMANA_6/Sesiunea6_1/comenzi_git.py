@@ -4,3 +4,5 @@ git add .
 git commit -m "mesajul sugestiv pentru incarcarea noilor modificari"
 git push
 """
+
+

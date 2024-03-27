@@ -205,6 +205,7 @@ def int_converter(func):
     Decorator care convertește rezultatul unei funcții la un număr întreg.
     Dacă conversia eșuează, se afișează un mesaj.
     """
+
     def wrapper(*args, **kwargs):
         try:
             result = func(*args, **kwargs)
@@ -276,6 +277,7 @@ def my_first_decorator(function_as_parameter):
         print(f'Am intrat in functia {function_as_parameter.__name__}!!!')
         function_as_parameter(*args, **kwargs)
         print(f'Am iesit din functia {function_as_parameter.__name__}!!!')
+
     return wrapper_func
 
 
@@ -285,3 +287,6 @@ def need_decorator(nume="Cosmin"):
 
 
 need_decorator()
+
+
+
