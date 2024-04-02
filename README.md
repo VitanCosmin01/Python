@@ -1,0 +1,2 @@
+Curs Python
+Teorie + practica
