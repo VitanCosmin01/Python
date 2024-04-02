@@ -30,13 +30,13 @@ with open("employees.csv", "r") as csv_file:
 # salvam randurile/datele din fisierul csv
 # intr-o lista, pentru ca vrem poate sa modificam
 # mai apoi valori din fiecare rand
-# rows = []
-# with open("employees.csv", "r") as csv_file:
-#     reader = csv.reader(csv_file)
-#     for row in reader:
-#         rows.append(row)
-#
-# print(rows)
+rows = []
+with open("employees.csv", "r") as csv_file:
+    reader = csv.reader(csv_file)
+    for row in reader:
+        rows.append(row)
+
+print(rows)
 
 # scriere intr-un fisier csv
 # with open("new_employees.csv", "w", newline="") as csv_file:

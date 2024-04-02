@@ -77,4 +77,3 @@ data_list = [
 
 scriere_in_fisier_json("contacte.json", data_list)
 
-

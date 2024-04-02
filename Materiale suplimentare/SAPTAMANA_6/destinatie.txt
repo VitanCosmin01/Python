@@ -1,1 +1,1 @@
-Acesta este fisierul, fisierul, fisierul sursa din care se va copia textul in cel destinatie
+Acesta este fisierul sursa din care se va copia textul in cel destinatie
