@@ -43,12 +43,39 @@ cursor.execute(query)
 connection.commit()
 
 # READ/GET ORDER BY ID
+get_order = """
+    SELECT * FROM orders
+    WHERE id = 2
+    """
+cursor.execute(get_order)
+order = cursor.fetchone()
+print(order)
 
 # READ/GET ALL ORDERS
+get_all_orders = """
+    SELECT * FROM orders
+    """
+cursor.execute(get_all_orders)
+orders = cursor.fetchall()
+print(orders)
 
 # UPDATE ORDER
+cursor.execute(
+    """
+    UPDATE orders SET order_date = '05.04.2024'
+    WHERE id = 4
+    """
+)
+connection.commit()
 
-# DELETE ORDER
-# TEMA:
-# - Ce se intampla daca stergem un order? Sunt sterse automat
-# si order items asociate?
+"""DELETE ORDER
+TEMA:
+- Ce se intampla daca stergem un order? Sunt sterse automat
+si order items asociate?"""
+cursor.execute(
+    """
+    DELETE FROM orders
+    WHERE id > 4
+    """
+)
+connection.commit()
