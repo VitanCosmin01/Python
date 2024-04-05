@@ -6,9 +6,9 @@ import sqlite3
 connection = sqlite3.connect("marketplace.db")
 cursor = connection.cursor()
 
-# CRUD
+"""CRUD
 
-# CREATE PRODUCT
+CREATE PRODUCT"""
 # product_query = """
 # INSERT INTO products (name, category, price, stock_count, description)
 # VALUES (?, ?, ?, ?, ?);
@@ -24,10 +24,38 @@ cursor = connection.cursor()
 # connection.commit()
 
 
-# READ PRODUCT (BY ID)
+"""READ PRODUCT (BY ID)"""
+# read_product_by_id = """
+#     SELECT *
+#     FROM products
+#     WHERE id = ?
+#     """
+#
+# cursor.execute(read_product_by_id, (2,))
+# product_2 = cursor.fetchone()
+# print(product_2)
 
-# READ/GET ALL PRODUCTS
+"""READ/GET ALL PRODUCTS"""
+read_all_products = """
+    SELECT description
+    FROM products
+    ORDER BY name DESC
+    """
+cursor.execute(read_all_products)
+all_products = cursor.fetchall()
+print(all_products)
 
-# UPDATE PRODUCT
+"""UPDATE PRODUCT"""
+cursor.execute("""
+    UPDATE products SET name = 'birou wenge', price = 780
+    WHERE id = 1
+""")
 
-# DELETE PRODUCT
+connection.commit()
+
+"""DELETE PRODUCT"""
+cursor.execute("""
+    DELETE FROM products
+    WHERE id = 6
+    """)
+connection.commit()

@@ -105,4 +105,3 @@ with open("dummy2.txt", mode="a") as file:
         "This is the fourth line\n"
     ])
 
-# comentariu

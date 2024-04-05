@@ -52,7 +52,11 @@ print(rows)
     # writer.writerows(rows)
 
 
-
-
+# stergere fisiere  csv
+import os
+if os.path.exists("produse.csv"):
+    os.remove("produse.csv")
+else:
+    print("The file does not exist")
 
 

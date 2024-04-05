@@ -13,20 +13,20 @@ cursor = connection.cursor()
 # care includ produsele/caracteristicile produselor
 
 # 1. cream o comanda
-# order_query = """
-# INSERT INTO orders (customer_id, order_date)
-# VALUES (1, '03.07.2023');
-# """
-#
-# cursor.execute(order_query)
-# connection.commit()
+order_query = """
+INSERT INTO orders (customer_id, order_date)
+VALUES (1, '03.07.2023');
+"""
+
+cursor.execute(order_query)
+connection.commit()
 
 # 2. adaugam linii de comanda
 # order_items_query = """
 # INSERT INTO order_items (order_id, product_id, quantity, total_price)
 # VALUES (?, ?, ?, ?);
 # """
-
+#
 # order_items = [
 #     (1, 1, 2, 240),
 #     (1, 2, 1, 56.99)

@@ -66,10 +66,11 @@ pune informatiile citite intr-un fisier json, numit "produse.json".
 import csv
 
 data = (
-    ["Car", "Model", "Volume", "Weight", "CO2"],
-    ["Toyoty", "Aygo", 1000, 790, 99],
-    ["Mitsubishi", "Space Star", 1200, 1160, 95],
-    ["Skoda", "Citigo", 1000, 929, 95]
+    ["id", "nume_produs", "pret", "cantitate"],
+    ["01", "telefon", 1000, 2],
+    ["02", "Mitsubishi", 1200, 1160 ],
+    ["03", "Skoda", 1000, 929],
+    ["04", "laptop", 1500, 5]
 )
 
 with open("produse.csv", "w", newline="") as csv_file:

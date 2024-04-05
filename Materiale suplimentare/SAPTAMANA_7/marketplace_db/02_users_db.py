@@ -12,10 +12,10 @@ import sqlite3
 connection = sqlite3.connect("marketplace.db")
 cursor = connection.cursor()
 
-# CREATE USER
+"""CREATE USER
 
-# user 1
-# are completate doar campurile obligatorii
+user 1
+are completate doar campurile obligatorii"""
 
 # cursor.execute(
 #     """
@@ -25,14 +25,16 @@ cursor = connection.cursor()
 # )
 # connection.commit()
 
-# user 2
-# are completate toate campurile (inclusiv cele optionale)
-# adaugam valori intr-un mod dinamic
+"""
+user 2
+are completate toate campurile (inclusiv cele optionale)
+adaugam valori intr-un mod dinamic
+"""
 
-# user_query = """
-# INSERT INTO users (username, email, password, first_name, last_name, address, city, postal_code, country)
-# VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
-# """
+user_query = """
+INSERT INTO users (username, email, password, first_name, last_name, address, city, postal_code, country)
+VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
+"""
 #
 # cursor.execute(
 #     user_query,
@@ -41,7 +43,9 @@ cursor = connection.cursor()
 # )
 # connection.commit()
 
-# adaugarea mai multor inregistrari in tabelul users deodata
+"""
+ adaugarea mai multor inregistrari in tabelul users deodata
+"""
 
 # user_query = """
 # INSERT INTO users (username, email, password, first_name, last_name, address, city, postal_code, country)
@@ -57,24 +61,31 @@ cursor = connection.cursor()
 # cursor.executemany(user_query, users_to_create)
 # connection.commit()
 
+"""
 # READ/ GET USER BY ID
+"""
 
-# get_by_id_query = """
-# SELECT * FROM users
-# WHERE id = ?;
-# """
-#
-# cursor.execute(get_by_id_query, (1,))
+get_by_id_query = """
+SELECT * FROM users
+WHERE id = ?;
+"""
 
-# cand executam un query de select, pentru a vedea rezultatul primit
-# putem sa apelam/invocam metoda fetchone() disponibila
-# pe obiectul cursor
+cursor.execute(get_by_id_query, (1,))
+"""
+cand executam un query de select, pentru a vedea rezultatul primit
+putem sa apelam/invocam metoda fetchone() disponibila
+pe obiectul cursor
+"""
+
 
 # user = cursor.fetchone() # ne returneaza intrarea din db sub forma de tuplu
 # print(user)
 # print(user[2])
 
-# GET USER BY username
+
+"""
+GET USER BY username
+"""
 # query = """
 # SELECT * FROM users
 # WHERE username = ?;
@@ -83,13 +94,14 @@ cursor = connection.cursor()
 # user2 = cursor.fetchone()
 # print(user2)
 
+
 # READ / GET ALL USERS
 # cursor.execute("""
 # SELECT * FROM users;
 # """)
 
-# v1
-# cursor = iterator
+"""# varianta 1
+# cursor = iterator"""
 # for row in cursor.execute("SELECT * FROM users;"):
 #     print(row)
 
@@ -104,15 +116,15 @@ cursor = connection.cursor()
 # cursor.execute("""
 # SELECT username, email FROM users;
 # """)
-
+#
 # users = cursor.fetchall()
 # print(users)
 #
 # for user in users:
 #     print(user)
 
-# UPDATE USER
-# schimbam username-ul si email-ul pentru user-ul cu id-ul 1
+"""UPDATE USER
+schimbam username-ul si email-ul pentru user-ul cu id-ul 1"""
 # cursor.execute(
 #     """
 #     UPDATE users SET email='cosmina@gmail.com', username='cosminabacter02'
