@@ -292,7 +292,7 @@ class Car:
 
 car = Car("Dacia", 5000)
 
-#print(car.__brand) # -> eroare
+# print(car.__brand) # -> eroare
 print(car._price)
 car.run()
 ###############################################
@@ -306,7 +306,6 @@ class Car:
 
     def set_color(self, culoarea_dorita):  # folosim setter ca sa setam o alta culoare
         self.__color = culoarea_dorita
-
 
 
 ##################################################
@@ -387,11 +386,9 @@ class Produs:
             print(f"Valoarea {self.__discount} este mai mare decat 100")
         self.__discount = new_discount
 
-
     def del_discount(self):
         print("Discount deleted")
         self.__discount = None
-
 
 
 prod1 = Produs("masa", 200, 101)  # am creat un obiect
@@ -424,7 +421,6 @@ finally:
     print("finally se executa mereu")
 print(rezultat)
 #####################################################
-
 
 
 # from abc(AbstractBaseClass Library) import ABC(este o clasa), abstractmethod(este o functie)

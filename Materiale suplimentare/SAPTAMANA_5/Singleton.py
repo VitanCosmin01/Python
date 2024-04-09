@@ -50,7 +50,7 @@ instance = None
 
 
 def __new__(cls, *args):
-    if not hasattr(cls, "instance"):                            #de folosit hasattr cat mai mult
+    if not hasattr(cls, "instance"):                  # de folosit hasattr cat mai mult
         cls.instance = super().__new__(cls, *args)
     return cls.instance
 

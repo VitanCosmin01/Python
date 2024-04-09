@@ -133,7 +133,7 @@ def citire_hello(cale_fisier):
 #     with open(file_name, 'w') as file:
 #         file.write(f'My name is letter {letters[index]}\n')
 #         file.write(f'I am the {position} letter of the alphabet.\n')
-# ########## o varianta de a afla pozitia fiecarei lityere in alfabet
+# ########## o varianta de a afla pozitia fiecarei litere in alfabet
 # # metoda ord arata un cod asociat fiecarei litere
 # import string
 #
