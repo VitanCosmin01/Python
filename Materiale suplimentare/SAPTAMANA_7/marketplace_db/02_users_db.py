@@ -15,7 +15,8 @@ cursor = connection.cursor()
 """CREATE USER
 
 user 1
-are completate doar campurile obligatorii"""
+are completate doar campurile obligatorii
+"""
 
 # cursor.execute(
 #     """

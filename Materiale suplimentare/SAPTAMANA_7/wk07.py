@@ -9,7 +9,8 @@ for item in response.json():
     print(item['title'])
 
 '''''
-Folosim https://jsonplaceholder.typicode.com/guide/ Toate requesturile se vor face prima data in 
+Folosim https://jsonplaceholder.typicode.com/guide/ .
+Toate requesturile se vor face prima data in 
 Postman (pentru verificare), iar apoi folosind libraria requests din Python.
 
 Structura datelor este următoarea: 
@@ -22,7 +23,9 @@ afișa următoarele informații:
 	-> lista de posts
 	-> lista de albume
 	-> lista de todos
-Pentru a menține output-ul la un nivel acceptabil, afișează la fiecare dintre aceste liste doar informații despre primele 3 obiecte, iar apoi afiseaza "+x more posts/albums/todos", unde x este numărul de obiecte rămase.
+Pentru a menține output-ul la un nivel acceptabil, afișează la fiecare dintre aceste liste doar 
+informații despre primele 3 obiecte, iar apoi afiseaza "+x more posts/albums/todos", 
+unde x este numărul de obiecte rămase.
 '''''
 
 import requests
@@ -66,7 +69,7 @@ for item in response3.json():
 
 
 # 2. Alege un post, și afișează lista de comentarii. Alege un album, si afiseaza lista de photos.
-
+print("______________________________________________________")
 for item in response2.json():
     if item['userId'] == 1 and item['title'] == 9:
         print(item['albums'])
@@ -82,6 +85,10 @@ for item in response2.json():
 
 # 6. Alege un album, și ia pozele din acesta în 2 moduri diferite (o data cu nested resource, o data
 # folosind query params). Verifica dacă exista vreo diferenta intre cele 2 rezultate.
+
+
+
+
 
 
 # Folosim Simple Books API, descris aici :
