@@ -19,10 +19,12 @@ metodele implementate.
 
 """
 import requests
+
 #
 # response = requests.get("https://simple-books-api.glitch.me/status")
 # print(response.status_code)
 # print(response.json())
+
 
 # varianta Cosmina
 def get_status(url):
@@ -37,11 +39,13 @@ url = 'https://simple-books-api.glitch.me'
 token = "5ef6aa91653030a7a3450d9b20388282d85446ecf82f4babcb787c984fe4cabf"
 
 # get all books
-#avem posibilitatea (este OPTIONAL) sa furnizam query params: limit si type
+# avem posibilitatea (este OPTIONAL) sa furnizam query params: limit si type
 # https://simple-books-api.glitch.me/books
 # https://simple-books-api.glitch.me/books?limit=1
 # https://simple-books-api.glitch.me/books?type=1
 # https://simple-books-api.glitch.me/books?type=1&limit=2
+
+
 def get_all_books(url, limit=0, type=''):
     link = url
     # if limit is not None:

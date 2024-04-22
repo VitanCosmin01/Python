@@ -1,4 +1,4 @@
-#from db.crud.products_crud import ProductsDb
+from db.crud.products_crud import ProductsDb
 
 from db.db_connection import create_database
 
@@ -87,7 +87,8 @@ def get_product_by_id(product_id):
 
 
 if __name__ == '__main__':
-    db.db_connection.create_database()
+    create_database()
+    # db.db_connection.create_database()
     products_crud = ProductsDb()
     products_crud.setup_products('./db/products_setup.json')
     app.run(debug=True, port=7001)

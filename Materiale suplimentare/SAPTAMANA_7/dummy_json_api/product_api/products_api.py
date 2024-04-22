@@ -34,8 +34,9 @@ class ProductsApi:
         # add_product(title="produs_nou")
         url = f'{self.__BASE_URL}/add'
         kwargs = {
-            "title": "produs nou",
-            "price": 23.45
+            "title": "presa arc",
+            "price": 23.45,
+            "stock": 12
         }
         response = requests.post(url, data=kwargs)
         return response

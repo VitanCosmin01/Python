@@ -113,7 +113,8 @@ print(cerc1.raza)
 cerc1.raza = 7
 print(cerc1.raza)
 ################################################
-'''
+
+
 class FormaGeometrica(ABC):
     PI = 3.14
 
@@ -174,6 +175,11 @@ class Cerc(FormaGeometrica):
         print('Eu nu am colturi')
 
 
+"""
+4. Creează un obiect de tip Pătrat și joacă-te cu metodele lui
+Creează un obiect de tip Cerc și joacă-te cu metodele lui
+"""
+
 patrat1 = Patrat(6)
 print(patrat1.latura)
 patrat1.latura = 10
@@ -185,14 +191,10 @@ cerc.raza = 5
 print(cerc.raza)
 print(cerc.aria())
 cerc.descriere()
-'''
 
 
-# """
-# 4. Creează un obiect de tip Pătrat și joacă-te cu metodele lui
-# Creează un obiect de tip Cerc și joacă-te cu metodele lui
-# """
 
-from abc import ABC, abstractmethod
 
-class Patrat(ABC):
+
+
+

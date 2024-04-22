@@ -25,10 +25,10 @@ cursor.execute(
 2. Using the link above, write all SQL statements needed to add all the seven continents (INSERT).
 """
 
-# continents_query = """
-# INSERT INTO continents (continent_name, continent_code)
-# VALUES (?,?);
-# """
+continents_query = """
+INSERT INTO continents (continent_name, continent_code)
+VALUES (?,?);
+"""
 
 # continents_to_add = [
 #     ('AF', 'Africa'),
@@ -54,8 +54,8 @@ population – number
 cursor.execute(
     '''
     CREATE TABLE IF NOT EXISTS countries (
-    contry_code CHAR(2) NOT NULL,
-    contry_name TEXT NOT NULL,
+    country_code CHAR(2) NOT NULL,
+    country_name TEXT NOT NULL,
     continent_id INTEGER NOT NULL,
     population INTEGER NOT NULL,
     FOREIGN KEY(continent_id) REFERENCES continents(continent_id)
@@ -82,7 +82,7 @@ Add at least 10 countries, as diverse as possible (INSERT). Examples:
 """
 
 countries_query = """
-INSERT INTO countries (contry_code, contry_name, continent_id, population)
+INSERT INTO countries (country_code, country_name, continent_id, population)
 VALUES (?, ?, ?, ?)
 """
 
@@ -98,37 +98,76 @@ countries_to_add = [
     ('AU', 'Australia', 3, 25000000)
 ]
 
-cursor.executemany(countries_query, countries_to_add)
-connection.commit()
-
+# cursor.executemany(countries_query, countries_to_add)
+# connection.commit()
 
 """
 5. Write a SQL statement to select all countries, ordered by 
 name. Write another statement to count them all.
 """
+cursor.execute(
+    """
+    SELECT DISTINCT country_name
+    FROM countries
+    ORDER BY country_name;
+    """
+)
+print(cursor.fetchall())
 
 """
 6. Write a SQL statement to select only countries with a 
 population greater than 20 millions.
 """
+cursor.execute(
+    """
+    SELECT country_name
+    FROM countries
+    WHERE population > 20000000;
+    """
+)
 
+
+print(cursor.fetchall())
 """
 7. Write a SQL statement to select only countries that start 
 with a certain letter (choose one that exists for you, e.g. C
 in the example above).
 """
-
+cursor.execute(
+    """
+    SELECT DISTINCT country_name
+    FROM countries
+    WHERE country_name LIKE 'C%';
+    """
+)
+print(cursor.fetchall())
 """
 8. Write a SQL statement that groups all countries by
  continents, and counts them.
 """
-
+cursor.execute(
+    """
+    SELECT continents.continent_name, COUNT(countries.country_name)
+    FROM countries
+    INNER JOIN continents ON continents.continent_id = countries.continent_id
+    GROUP BY continents.continent_name;
+    """
+)
+print(cursor.fetchall())
 """
 9. Write a SQL statement that groups all countries by 
 continent, and computes the total population per continent 
 (SUM).
 """
-
+cursor.execute(
+    """
+    SELECT continents.continent_name, SUM(countries.POPULATION)
+    FROM countries
+    INNER JOIN continents ON continents.continent_id = countries.continent_id
+    GROUP BY continents.continent_name
+    """
+)
+print(cursor.fetchall())
 """
 10.Extra exercises can be found online:
 W3Schools: https://www.w3schools.com/mysql/exercise.asp?filename=exercise_select1
