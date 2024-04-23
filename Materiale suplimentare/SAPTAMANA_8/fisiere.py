@@ -13,26 +13,26 @@ Node.js
 Write a short program to read and display the text file
 """
 import json
-import string
-
-with open(file="hello.txt", mode="w") as file:
-    file.writelines([
-        "Python\n"
-        "Java\n"
-        "Javascript\n"
-        "C/C++/C#\n"
-        "PHP\n"
-        "Node.js\n"
-    ]
-    )
 
 
-def read_file(file_path):
-    with open(file_path, "r") as f:
-        return f.readlines()
-
-
-print(read_file(file_path="hello.txt"))
+# with open(file="hello.txt", mode="w") as file:
+#     file.writelines([
+#         "Python\n"
+#         "Java\n"
+#         "Javascript\n"
+#         "C/C++/C#\n"
+#         "PHP\n"
+#         "Node.js\n"
+#     ]
+#     )
+#
+#
+# def read_file(file_path):
+#     with open(file_path, "r") as f:
+#         return f.readlines()
+#
+#
+# print(read_file(file_path="hello.txt"))
 """
 2. Write a short program to append the following lines to “hello.txt” (you will use a list of strings and a for-loop):
 Go
@@ -41,27 +41,27 @@ Swift
 
 Display the new contents of the file.
 """
-f = open("hello.txt", "a")
-f.write("Go\n"
-        "Kotlin\n"
-        "Swift\n"
-        )
-f.close()
-
-f = open("hello.txt", "r")
-for x in f:
-    print(x)
+# f = open("hello.txt", "a")
+# f.write("Go\n"
+#         "Kotlin\n"
+#         "Swift\n"
+#         )
+# f.close()
+#
+# f = open("hello.txt", "r")
+# for x in f:
+#     # print(x)
 """
 3. Write a short program that reads the “hello.txt” file and displays every other line (only odd lines).
 """
 
-with open("hello.txt", "r") as f:
-    lines = f.readlines()
-    # for index, line in enumerate(lines):
-    #     if (index + 1) % 2 == 0:
-    #         print(line)
-    for index in range(1, len(lines), 2):
-        print(lines[index])
+# with open("hello.txt", "r") as f:
+#     lines = f.readlines()
+#     # for index, line in enumerate(lines):
+#     #     if (index + 1) % 2 == 0:
+#     #         print(line)
+#     for index in range(1, len(lines), 2):
+#         print(lines[index])
 """
 4. Write a program that generates 26 text files, called `A.txt`, `B.txt`, … `Z.txt`. 
 Each file will contain the sentences below:
@@ -74,6 +74,7 @@ Make sure you use the correct ending for the letter’s number (e.g. 1st, 2nd, 3
 # Din libraria string, putem sa ne folosim de variabila asci_uppercase
 # pentru a avea acces la toate literele din alfabet, scrise cu litera mare
 # asci_uppercase este un STRING
+# import string
 # VARIANTA 1
 # letters = string.ascii_uppercase
 # print(letters)
@@ -99,15 +100,15 @@ Make sure you use the correct ending for the letter’s number (e.g. 1st, 2nd, 3
 # VARIANTA 2
 
 
-letters = string.ascii_uppercase
-print(letters)
-
-for letter in letters:
-    print(letter)
-    print(ord(letter))
-    index = ord(letter) - ord('A')
-    # litera B: 66 - 65 = 1
-    # litera C: 67 - 65 = 2
+# letters = string.ascii_uppercase
+# print(letters)
+#
+# for letter in letters:
+#     print(letter)
+#     print(ord(letter))    # FUNCTIA ORD ARATA POZITIA CARACTERULUI IN TABELUL ASCII
+#     index = ord(letter) - ord('A')
+#     # litera B: 66 - 65 = 1
+#     # litera C: 67 - 65 = 2
 """
 5. Create a csv file called “students.csv” and add the following text inside of it:
 id,fname,lname,age,grade
@@ -133,24 +134,24 @@ id	fname		lname		age	grade
 """
 import csv
 
-with open("students.csv", mode="w", newline='') as f:
-    writer = csv.writer(f)
-    writer.writerow(['id', 'fname', 'lname', 'age', 'grade'])
-    writer.writerow([1, 'Maria', 'Popescu', 31, 7.5])
-    writer.writerow([2, 'Andrei', 'Ionescu', 26, 8.0])
-    writer.writerow([3, 'Adriana', 'Marinescu', 21, 7.5])
-    writer.writerow([4, 'Matei', 'Gheorghescu', 42, 8.5])
-    writer.writerow([5, 'Eusebiu', 'Pop', 33, 9.5])
-    writer.writerow([6, 'Ioana', 'Popa', 29, 9.0])
-
-with open("students.csv", mode='r') as f:
-    reader = csv.reader(f)
-    header = next(reader)
-
-    print(f'{header[0]:<4} {header[1]:<10} {header[2]:<13} {header[3]:<5}  {header[4]:<7}')
-    print('-'*43)
-    for row in reader:
-        print(f'{row[0]:<4} {row[1]:<10} {row[2]:<13} {row[3]:<5}  {row[4]:<7}')
+# with open("students.csv", mode="w", newline='') as f:
+#     writer = csv.writer(f)
+#     writer.writerow(['id', 'fname', 'lname', 'age', 'grade'])
+#     writer.writerow([1, 'Maria', 'Popescu', 31, 7.5])
+#     writer.writerow([2, 'Andrei', 'Ionescu', 26, 8.0])
+#     writer.writerow([3, 'Adriana', 'Marinescu', 21, 7.5])
+#     writer.writerow([4, 'Matei', 'Gheorghescu', 42, 8.5])
+#     writer.writerow([5, 'Eusebiu', 'Pop', 33, 9.5])
+#     writer.writerow([6, 'Ioana', 'Popa', 29, 9.0])
+#
+# with open("students.csv", mode='r') as f:
+#     reader = csv.reader(f)
+#     header = next(reader)
+#
+#     print(f'{header[0]:<4} {header[1]:<10} {header[2]:<13} {header[3]:<5}  {header[4]:<7}')
+#     print('-'*43)
+#     for row in reader:
+#         print(f'{row[0]:<4} {row[1]:<10} {row[2]:<13} {row[3]:<5}  {row[4]:<7}')
 """
 6. Read again the information from the csv file above, store it all in a list of data, and then write a new file,
 called “students.json”, which will contain a valid JSON object. 
@@ -167,6 +168,9 @@ Use the following format for each student (and use Python’s standard JSON modu
     ...
 ]
 """
+import csv
+import json
+
 students = []
 with open("students.csv", mode='r') as f:
     reader = csv.DictReader(f)
@@ -176,6 +180,7 @@ with open("students.csv", mode='r') as f:
 print(students)
 with open("students.json", mode='w') as f:
     json.dump(students, f, indent=4)
+
 """
 7.
 Create a new PyCharm project. Make sure it has a virtualenv. Install all the following 

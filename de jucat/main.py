@@ -1,4 +1,4 @@
-'''
+"""
 x = 4
 y = 2
 print(x % y)  #=> afiseaza restul impartirii
@@ -11,7 +11,7 @@ print(4/2)
 print(x>y)
 print(x>y and x<4) # daca e True si Fals = Fals
 print(x>y or x<y)  # True or Fals = Fals
-'''
+"""
 # IF
 # x=5
 # if  x==5:
@@ -346,8 +346,10 @@ si o propozitie care contine atributele salariu si post.
 # pers1 = Angajat('Cosmin', 40, 5000, 'tehnician')
 # print(pers1.salariu)
 # print(pers1.post)
-##############################################
+print("POLIMORFISM", "_" * 50)
 # Exemplu de class methods polimorfice
+
+
 class Romania:
     def language(self):
         print("Romanian")

@@ -103,7 +103,7 @@ class Cerc(FormaGeometrica):
     @raza.deleter
     def raza(self):
         print('am modificat raza')
-       # self.__raza = 0
+        # self.__raza = 0
         del self.__raza
 
 
@@ -112,7 +112,7 @@ cerc1 = Cerc(8)
 print(cerc1.raza)
 cerc1.raza = 7
 print(cerc1.raza)
-################################################
+print("-"*50)
 
 
 class FormaGeometrica(ABC):
