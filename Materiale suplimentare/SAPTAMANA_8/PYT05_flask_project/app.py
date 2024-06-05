@@ -1,4 +1,5 @@
-from PYT05_flask_project.models.user import User
+# from PYT05_flask_project.models.user import User
+from models.user import User
 from db.crud.products_crud import ProductsDb
 
 from db.db_connection import create_database
