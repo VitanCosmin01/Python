@@ -36,7 +36,7 @@ class UsersDb(CrudABC):
         else:
             cursor.execute(sql_query, (value,))
 
-        users = cursor.fetchall() # o lista cu liste
+        users = cursor.fetchall()   # o lista cu liste
 
         users_json = []
         for user in users:
