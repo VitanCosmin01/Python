@@ -35,13 +35,13 @@ numar2 = int(numar2)
 # int -> str
 numar1 = 10
 # print("before", type(numar1))
-numar1 = str(numar1) # '10'
+numar1 = str(numar1)  # '10'
 # print("after", type(numar1))
 
 # float -> str
 numar2 = 25.5
 # print("before", type(numar2))
-numar2 = str(numar2) # '25.5'
+numar2 = str(numar2)  # '25.5'
 # print("after", type(numar2))
 
 # int -> float
@@ -55,7 +55,7 @@ numar4 = int(numar4)
 # print(numar4)
 
 my_str = "Ana are mere"
-# print(bool(my_str)) # True
+# print(bool(my_str))  # True
 
 my_str2 = ""
 # print(bool(my_str2)) # False

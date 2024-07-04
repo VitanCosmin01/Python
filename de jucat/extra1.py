@@ -37,7 +37,7 @@ Identifica eroarea din fiecare caz de mai jos
 # o solutie sa nu mai avem eroare, este sa accesam valoarea cheii
 # 'departament', si nu, 'Departament'.
 # alta solutie: angajati[1].get("Departament", "Nu avem cheia respectiva")
-
+# print(angajati[1].get("Departament", "Nu avem cheia respectiva!"))
 
 # 3: ValueError, 'I/O operation on closed file', linia 45
 # with open("scrisoare_recomandare.txt", mode="w") as f:
@@ -100,28 +100,28 @@ Identifica eroarea din fiecare caz de mai jos
 
 # Ca rezolvare, fie nu mai accesam valoarea atributul age, avand in vedere ca
 # nu este disponibil pe obiectele din clasa Student,
-# fie adaugam acest atribut in cosntructor (ori in constructorul clasei Student,
+# fie adaugam acest atribut in cosntructor ori in constructorul clasei Student,
 # ori in costructorul clasei Person - recomandare: in costructorul clasei Person,
 # pentru ca age este un atribut/o proprietate care ar trebui sa caracterizez orice obiect
 # din clasa Person/ orice persoana.
 
 # 6 AttributeError: 'User' object has no attribute '__password', linia 119
-class User:
-
-    def __init__(self, username, email, password):
-        self.username = username
-        self.email = email
-        self.__password = password
-
-
-user1 = User("anapopa25", "ana.popa@gmail.com", "123abc")
-print(user1.username)
-print(user1.__password)
-print(user1.email)
+# class User:
+#
+#     def __init__(self, username, email, password):
+#         self.username = username
+#         self.email = email
+#         self.__password = password
+#
+#
+# user1 = User("anapopa25", "ana.popa@gmail.com", "123abc")
+# print(user1.username)
+# print(user1.__password)
+# print(user1.email)
 
 # posibile rezolvari:
 
-# v1: Nu mai accesam atributul __passoword in exterioul clasei
+# v1: Nu mai accesam atributul __password in exterioul clasei
 
 # v2: In loc sa facem atributul __password sa fie privat, il putem facem sa fie
 # protected, punand un singur _ in fata denumirii: _password.

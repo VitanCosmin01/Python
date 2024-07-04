@@ -20,14 +20,10 @@ numar = 10
 LINK = "https://www.google.com"
 
 
-my_dict = {
-    "nume": "Ana Popa",
-    "varsta": 20
-}
+my_dict = {"nume": "Maria Popa", "varsta": 20}
 
 # dictionarul este neordonat -> nu putem accesa elementele dupa index
 # dictionarul este mutabil -> elementele sale pot fi modificate
-my_dict["nume"] = "Maria Popa"
 print(my_dict)
 
 # string-ul este IMUTABIL
@@ -38,11 +34,11 @@ print(my_str)
 # string-ul este ORDONAT
 print(my_str[2])
 
-print(my_str[0:3]) # abc
-print(my_str[:3]) # abc
+print(my_str[0:3])  # abc
+print(my_str[:3])  # abc
 
-print(my_str[3:]) # aaa
-print(my_str[3:-1]) # aa
+print(my_str[3:])  # aaa
+print(my_str[3:-1])  # aa
 
 
 # pe dictionar avem disponibila metoda clear
@@ -90,8 +86,46 @@ rotate([1, 2, 3, 4, 5], 5) => [1, 2, 3, 4, 5]
 rotate([1, 2, 3, 4, 5], 6) => [2, 3, 4, 5, 1]
 rotate([1, 2, 3, 4, 5], 7) => [3, 4, 5, 1, 2]
 """
+#  varianta 1
 
 
+def rotate(lista, k):
+    k = k % len(lista)
+    lista_v2 = lista[k:] + lista[:k]
+    print(lista_v2)
+
+
+rotate([1, 2, 3, 4, 5], 14)
+
+# varianta 2
+from collections import deque
+
+
+# def lista():
+#     x = int(input("Introduceti numarul de elemente din lista:"))
+#     our_list = deque([])
+#     for i in range(x):
+#         elements = input("Elementul" + str(i) + "este:")
+#         our_list.append(elements)
+#     return our_list
+
+
+# our_list1 = lista()
+# print(our_list1)
+# n = int(input("Introduceti numarul de rotatii dorit:"))
+# our_list1.rotate(-n)
+# print(our_list1)
+
+# varianta 3
+
+
+def rot(list3, k):
+    deque_list = deque(list3)
+    deque_list.rotate(-k)
+    return list(deque_list)
+
+
+print(rot([1, 2, 3, 4, 5], 2))
 """
 3. Creaza o functie Python care primește 2 stringuri, și verifica dacă acestea sunt anagrame (case-insensitive).
 
@@ -102,6 +136,18 @@ is_anagram(‘Stringy’, ‘gringsty’) => False
 is_anagram(‘ana’, ‘ioana’) => False
 """
 
+
+def is_anagram(word1, word2):
+
+    if sorted(word1.upper()) == sorted(word2.upper()):
+        print("Sunt anagrame!")
+    else:
+        print("Cuvintele nu sunt anagrame!")
+
+
+word1 = str(input("word1: "))
+word2 = str(input("word2: "))
+is_anagram(word1, word2)
 """
 4. Creaza o functie Python care primeste o lista de numere, si il returneaza pe al doilea cel mai mare numar distinct.
 

@@ -1,5 +1,5 @@
 # base class / parent class
-class Chef:
+class Chef:  # clasa parinte
 
     def __init__(self, experience):
         self.experience = experience
@@ -13,7 +13,7 @@ class Chef:
 
 # child class - mosteneste din clasa Chef
 # se trece intre paranteze numele clasei parinte
-class JapaneseChef(Chef):
+class JapaneseChef(Chef):  # clasa copil
 
     def make_sushi(self):
         print("sushi")
@@ -178,33 +178,27 @@ class Romania:
     def language(self):
         print("Romanian")
 
-
 class USA:
     def language(self):
         print("English")
 
-
 obj_ro = Romania()
 obj_usa = USA()
 
-obj_ro.language()
-obj_usa.language()
-
+obj_ro.language()     # => Romanian
+obj_usa.language()    # => English
 
 def get_country_language(country_obj):
     country_obj.language()
 
-
-get_country_language(obj_ro)
-get_country_language(obj_usa)
+get_country_language(obj_ro)   # => Romanian
+get_country_language(obj_usa)  # => English
 
 print("____________________________________")
 
 # ABSTRACTIZAREA
 # Se importa:
 from abc import ABC, abstractmethod
-
-
 class Animal(ABC):
 
     @abstractmethod
@@ -226,8 +220,6 @@ class Dog(Animal):
 
     def sleep(self):
         print('ZZZZ')
-
-
 class Cat(Animal):
 
     def sound(self):
@@ -238,14 +230,14 @@ class Cat(Animal):
 
 
 cat = Cat()
-cat.sound()
-cat.sleep()
-cat.describe()
+cat.sound()    # => Miau miau
+cat.sleep()     # => Prrr
+cat.describe()  # => This animal is my favourite!
 
 dog = Dog()
-dog.sound()
-dog.sleep()
-dog.describe()
+dog.sound()   # =>Ham ham
+dog.sleep()   # =>ZZZZ
+dog.describe()  # =>This animal is my favourite!
 print("_____________________Ex:_3______________")
 #from abc import ABC, abstractmethod
 
@@ -260,6 +252,7 @@ class Car(ABC):
 class Tesla(Car):
     def __init__(self, model):
         self.model = model
+
     def car_model(self):
         print(f"This is an electric car {self.model}")
 
@@ -267,6 +260,7 @@ class Tesla(Car):
 class Bmw(Car):
     def __init__(self, model):
         self.model = model
+
     def car_model(self):
         print(f"Stupid car {self.model}")
 
@@ -280,11 +274,12 @@ tesla.car_model()
 print("_____________________________________")
 # Incapsulare
 
+
 class Car:
 
     def __init__(self, brand, price):
-        self.__brand = brand # atribut privat
-        self._price = price # atribut protected
+        self.__brand = brand  # atribut privat
+        self._price = price  # atribut protected
 
     def run(self):
         print(f"Please run {self.__brand}")
@@ -370,6 +365,8 @@ b. Defineste proprietatea discount:
 asigura-te ca acesta e cuprins intre 0-100.
 - deleter
 """
+
+
 class Produs:
     def __init__(self, nume, pret, discount):
         self.nume = nume

@@ -13,7 +13,7 @@ pe mai multe linii
 
 # declaram si initializam 2 variabile
 # marca_masina = 'Volvo'
-model_masina = 'XC 60'
+# model_masina = 'XC 60'
 #
 # fructe_preferate_1 = "capsuni, struguri"
 #
@@ -27,7 +27,7 @@ model_masina = 'XC 60'
 # print(id(my_var))
 # print(id(my_Var))
 
-# suprascriere = atribuirea unei noi valori pentru o variabila deja definita
+""" suprascriere = atribuirea unei noi valori pentru o variabila deja definita"""
 
 # declaram/initializam o variabila cu numele pret si valoarea 100
 # pret = 100

@@ -21,6 +21,37 @@ Exemple date angajati:
 "SMITH", "E7698", 55000, "OPERATIONS"
 """
 
+
+class Employee:
+    def __init__(self, id_no, name, salary, department):
+        self.id_no = id_no
+        self.name = name
+        self._salary = salary
+        self.department = department
+
+    def __str__(self):
+        return f'{self.id_no}, {self.name}, {self._salary}, {self.department}!'
+
+    def assign_department(self, new_department):
+        self.department = new_department
+        return f'The new department is: {self.department}!'
+
+    def employee_details(self):
+        return f'Details for are: \nID: {self.id_no}, Name: {self.name}, Salary: {self._salary}, Department: {self.department}'
+
+    def calculate_salary(self, salary, hours_worked):
+        if hours_worked > 50:
+            extra = hours_worked - 50
+            self._salary = self._salary + extra * salary/50
+            return self._salary
+
+
+employee1 = Employee(1, "Vitan Cosmin", 1500, "Logistica")
+print(employee1)
+print(employee1.assign_department("IT"))
+print(employee1.employee_details())
+print(employee1.calculate_salary(1500, 60))
+
 """
 Clasa MenuItem:
 - atribute: id, nume, ingrediente, cantitate, pret, alergeni, categorie

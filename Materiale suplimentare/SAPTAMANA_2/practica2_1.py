@@ -23,49 +23,39 @@
 # str2 = "rosie"
 # print(str1+str2)
 
-# # LISTE
-# # Exemplu de lista ordonata de numere intregi
+# LISTE
+# Exemplu de lista ordonata de numere intregi
 # numbers = [1, 2, 3, 4, 5]
 # print(numbers)
 # # Output: [1, 2, 3, 4, 5]
-#
 # # Lista este ORDONATA
 # # Fiecare element din lista poate fi accesat dupa index
-# print(numbers[0]) # accesarea primului element din lista -> 1
-# print(numbers[2]) # 3
-# print(numbers[-1]) # 5
-#
-# print(numbers[::-1]) # inversarea unei liste
-#
+# print(numbers[0])   # => accesarea primului element din lista -> 1
+# print(numbers[2])   # => 3
+# print(numbers[-1])  # => 5
+# # inversarea unei liste
+# print(numbers[::-1])  # => [5, 4, 3, 2, 1]
 # # Lista este MUTABILA
 # # Putem sa modificam, sa stergem si sa adaugam elemente intr-o lista
-#
 # cifre = [0, 6, 3, 4, 1, 2, 5, 7, 8]
-# print(cifre)
+# print(cifre)  # => [0, 6, 3, 4, 1, 2, 5, 7, 8]
 # # adaugam cifra 9 in lista cifre la finalul listei
 # cifre.append(9)
-# print(cifre)
-#
+# print(cifre)  # => [0, 6, 3, 4, 1, 2, 5, 7, 8, 9]
 # # adaugam 9 in lista cifre la indexul 2
 # cifre.insert(2, 9)
-# print(cifre)
-#
+# print(cifre)  # => [0, 6, 9, 3, 4, 1, 2, 5, 7, 8]
 # # stergem ultimul element din lista
 # cifre.pop()
-# print(cifre)
-#
+# print(cifre)  # =>[0, 6, 9, 3, 4, 1, 2, 5, 7]
 # # stergem elementul de la indexul 1 in lista cifre
 # element_sters = cifre.pop(1)
-# print(element_sters)
-# print(cifre)
-#
-# # stergem prima aparitie a unui element in lista
-# # dupa valoare
+# print(element_sters) # => 6
+# print(cifre)  # =>[0, 9, 3, 4, 1, 2, 5, 7]
+# # stergem prima aparitie a unui element in lista dupa valoare
 # cifre.remove(3)
-# print(cifre)
-#
+# print(cifre)   # => [0, 9, 4, 1, 2, 5, 7]
 # # cifre.remove(6) # -> ValueError
-#
 # caractere = ["a", "b", "a", "b", "c", "a"]
 # print(caractere)
 # caractere.remove("a")
@@ -74,151 +64,149 @@
 # print(caractere)
 # caractere.remove("a")
 # print(caractere)
-#
 # # actualizam valoarea unui element
 # cifre = [0, 6, 3, 4, 1, 2, 5, 7, 8]
 # cifre[1] = 5
 # print(cifre)
+# print(type(cifre))  # <class 'list'>
+
+# # DICTIONARE
 #
-# print(type(cifre)) # <class 'list'>
-
-# DICTIONARE
-
-my_dict = {
-    'nume_produs': 'produs_1',
-    'pret': 23.00,
-    'in_stoc': False
-}
-
-# my_dict = {'nume_produs': 'produs_1', 'pret': 23.00, 'in_stoc': False}
-
-# print(my_dict)
-
-contacte = ["0722345567", "0784553344", "0745332211"]
-
-contacte = {
-    'Ana': "0722345567",
-    'Marius': '0784553344',
-    'Maria': '0745332211'
-}
-
-contacte = [
-    {
-        'nume': 'Popa',
-        'prenume': 'Ana',
-        'nr_telefon': '0722345567',
-        'adresa' : 'Strada Mihai Eminescu, 46',
-        'adresa_mail': 'ana@popa.com',
-        'varsta': 25,
-        'are_masina': False
-    }
-]
-
-# Dictionarul este NEORDONAT => elementele din dictionar nu
-# sunt pastrate in memorie in ordinea in care au fost adaugate
-# + NU putem sa accesam elementele dintr-un dictionar dupa index
-
-# Dictionarul este MUTABIL => elementele din dictionar
-# pot sa fie modificare, adaugate, sterse
-
-contacte = {
-    'Ana': '0722345678',
-    'Marius': '0721549888',
-    'Maria': '0765332967'
-}
-
-# dorim sa accesam numarul lui Marius
-# accesam o valoare din dictionar furnizand cheia
-# asociata cu acea valoare
-# print(contacte['Marius'])
-
-# dorim sa accesam numarul lui Alin
-# dorim sa accesam valoarea aferenta cheii Alin
-# -> DEZAVANTAJ: daca cheia nu exista in dictionar,
-# si folosim aceasta sintaxa => obtinem eroare
-# print(contacte['Alin']) # -> eroare: KeyError
-# print("here")
-
-# pentru a nu avea eroare in cazul in care
-# cheia nu exista in dictionar,
-# ne folosim de metoda ajutatoare get
-# Metoda get ia ca si parametri:
-# - primul parametru: cheia pentru care dorim sa ii aflam/returnam valoarea
-# - al doilea parametru: spunem ce vrem sa se returneze daca nu s-a gasit cheia furnizata in dictinar
-# print(contacte.get('Alin', "Nu am gasit numarul de telefon cerut"))
-
-
+# my_dict = {
+#     'nume_produs': 'produs_1',
+#     'pret': 23.00,
+#     'in_stoc': False
+# }
+#
+# # my_dict = {'nume_produs': 'produs_1', 'pret': 23.00, 'in_stoc': False}
+#
+# # print(my_dict)
+#
+# contacte = ["0722345567", "0784553344", "0745332211"]
+#
+# contacte = {
+#     'Ana': "0722345567",
+#     'Marius': '0784553344',
+#     'Maria': '0745332211'
+# }
+#
+# contacte = [
+#     {
+#         'nume': 'Popa',
+#         'prenume': 'Ana',
+#         'nr_telefon': '0722345567',
+#         'adresa' : 'Strada Mihai Eminescu, 46',
+#         'adresa_mail': 'ana@popa.com',
+#         'varsta': 25,
+#         'are_masina': False
+#     }
+# ]
+#
+# # Dictionarul este NEORDONAT => elementele din dictionar nu
+# # sunt pastrate in memorie in ordinea in care au fost adaugate
+# # + NU putem sa accesam elementele dintr-un dictionar dupa index
+#
+# # Dictionarul este MUTABIL => elementele din dictionar
+# # pot sa fie modificare, adaugate, sterse
+#
+# contacte = {
+#     'Ana': '0722345678',
+#     'Marius': '0721549888',
+#     'Maria': '0765332967'
+# }
+#
+# # dorim sa accesam numarul lui Marius
+# # accesam o valoare din dictionar furnizand cheia
+# # asociata cu acea valoare
+# # print(contacte['Marius'])
+#
+# # dorim sa accesam numarul lui Alin
+# # dorim sa accesam valoarea aferenta cheii Alin
+# # -> DEZAVANTAJ: daca cheia nu exista in dictionar,
+# # si folosim aceasta sintaxa => obtinem eroare
+# # print(contacte['Alin']) # -> eroare: KeyError
+# # print("here")
+#
+# # pentru a nu avea eroare in cazul in care
+# # cheia nu exista in dictionar,
+# # ne folosim de metoda ajutatoare get
+# # Metoda get ia ca si parametri:
+# # - primul parametru: cheia pentru care dorim sa ii aflam/returnam valoarea
+# # - al doilea parametru: spunem ce vrem sa se returneze daca nu s-a gasit cheia furnizata in dictinar
+# # print(contacte.get('Alin', "Nu am gasit numarul de telefon cerut"))
 #
 #
+# #
+# #
+# #
+# # Cate perechi cheie-valoare/elemente avem intr-un dictionar?
+# # print(len(contacte))
 #
-# Cate perechi cheie-valoare/elemente avem intr-un dictionar?
-# print(len(contacte))
-
-# Dictionarele sunt MUTABILE -> ca putem sa adaugam, modificam,
-# stergem elemente din dictionar
-
-
-person = {
-    "name": "John",
-    "age": 30,
-    "city": ["New York", "Los Angeles"],
-    "occupation": "teacher",
-}
-
-# ADAUGAREA unui element nou in dictionar
-# v1
-person['salary'] = 3000.00
-# print(person)
-
-# v2
-person.update({"has_car": True})   # cream perechea cheie-valoare
-# print(person)
-person.update({"has_car": False})  # actualizam perechea cheie-valoare
-# print(person)
-
-person.update({
-    "eyes_color": "green",
-    "email": "john@gmail.com"
-})
-
-# print(person)
-
-# MODIFICAREA unui element in dictionar
-# v1
-person['age'] = 31
-# print(person)
-
-# v2
-person.update({"age": 32})
-# print(person)
-
-# STERGEREA unui element din dictionar
-# v1
-del person['city']
-if person.get("city", False):
-    del person["city"]
-del person['salary']     # stergem mai multe key:value deodata
-# print(person)
-
-# v2
-# stergerea unui perechi cheie:valoare dupa cheie
-person.pop("name")
-# print(person)
-
-products = ["apples", "oranges", "bananas"]
-products[1] = "lime"           # este rescris indexul 1
-print(products)
-print(products[2])
+# # Dictionarele sunt MUTABILE -> ca putem sa adaugam, modificam,
+# # stergem elemente din dictionar
+#
+#
+# person = {
+#     "name": "John",
+#     "age": 30,
+#     "city": ["New York", "Los Angeles"],
+#     "occupation": "teacher",
+# }
+#
+# # ADAUGAREA unui element nou in dictionar
+# # v1
+# person['salary'] = 3000.00
+# # print(person)
+#
+# # v2
+# person.update({"has_car": True})   # cream perechea cheie-valoare
+# # print(person)
+# person.update({"has_car": False})  # actualizam perechea cheie-valoare
+# # print(person)
+#
+# person.update({
+#     "eyes_color": "green",
+#     "email": "john@gmail.com"
+# })
+#
+# # print(person)
+#
+# # MODIFICAREA unui element in dictionar
+# # v1
+# person['age'] = 31
+# # print(person)
+#
+# # v2
+# person.update({"age": 32})
+# # print(person)
+#
+# # STERGEREA unui element din dictionar
+# # v1
+# del person['city']
+# if person.get("city", False):
+#     del person["city"]
+# del person['salary']     # stergem mai multe key:value deodata
+# # print(person)
+#
+# # v2
+# # stergerea unui perechi cheie:valoare dupa cheie
+# person.pop("name")
+# # print(person)
+#
+# products = ["apples", "oranges", "bananas"]
+# products[1] = "lime"           # este rescris indexul 1
+# print(products)
+# print(products[2])
 
 """
 Se dau două numere naturale cu cel mult 4 cifre fiecare. Se cere să se 
 verifice dacă primul număr se împarte exact la al doilea (se va afişa DA sau NU).
 Exemplu: dacă se citesc numerele 101 şi 30 se va afişa NU.
 """
-a = int(input("a = "))
-b = int(input("b = "))
-if a % b == 0:
-    print("DA")
-else:
-    print("NU")
+# a = int(input("a = "))
+# b = int(input("b = "))
+# if a % b == 0:
+#     print("DA")
+# else:
+#     print("NU")
 

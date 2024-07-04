@@ -38,9 +38,9 @@ Implementează metoda cerută de interfață (opțional, doar dacă ai ales să 
 
 
 class Patrat(FormaGeometrica):
-
+    # constructor
     def __init__(self, latura):
-        self.__latura = latura
+        self.__latura = latura  # atribut privat
 
     def aria(self):
         return f'Aria patratului este egala cu {self.__latura**2}.'
@@ -123,7 +123,6 @@ del patrat1.latura                  # deleter
 print(patrat1.latura)
 
 cerc1 = Cerc(10)
-cerc1.raza()         # imi da eroare si nu stiu sa o rezolv
 cerc1.aria()
 cerc1.descrie()
 del cerc1.raza
