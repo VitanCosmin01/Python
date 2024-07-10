@@ -182,14 +182,17 @@ class USA:
     def language(self):
         print("English")
 
+
 obj_ro = Romania()
 obj_usa = USA()
 
 obj_ro.language()     # => Romanian
 obj_usa.language()    # => English
 
+
 def get_country_language(country_obj):
     country_obj.language()
+
 
 get_country_language(obj_ro)   # => Romanian
 get_country_language(obj_usa)  # => English
@@ -199,6 +202,8 @@ print("____________________________________")
 # ABSTRACTIZAREA
 # Se importa:
 from abc import ABC, abstractmethod
+
+
 class Animal(ABC):
 
     @abstractmethod
@@ -220,6 +225,8 @@ class Dog(Animal):
 
     def sleep(self):
         print('ZZZZ')
+
+
 class Cat(Animal):
 
     def sound(self):
@@ -239,7 +246,7 @@ dog.sound()   # =>Ham ham
 dog.sleep()   # =>ZZZZ
 dog.describe()  # =>This animal is my favourite!
 print("_____________________Ex:_3______________")
-#from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
 
 class Car(ABC):
@@ -393,7 +400,7 @@ print(prod1.nume)                                   # am acccesat atributele pe 
 print(prod1.pret)                                   # am acccesat atributele pe obiect
 # print(prod1.get_discount())
 
-Produs.set_discount(prod1,120)
+Produs.set_discount(prod1, 120)
 print(prod1.get_discount())
 
 Produs.del_discount(prod1)

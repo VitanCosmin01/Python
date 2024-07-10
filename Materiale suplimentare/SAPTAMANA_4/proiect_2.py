@@ -68,4 +68,5 @@ task.adauga_task("zi de nastere", "la_george")
 task.adauga_task("congres", "departe")
 print(task.todo)
 task.afiseaza_todo_list1()
-#task.afiseaza_todo_list()
+task.afiseaza_todo_list()
+
