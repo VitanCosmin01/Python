@@ -11,7 +11,7 @@
 ## 📌 Design Patterns
 - Design Pattern-urile ofera o solutie generala, reutilizabila pentru probleme comune
 care apar in timpul dezvoltarii software-ului.
-Pattern-ul, in general, arata relatia si interactiunea dintr clase
+Pattern-ul, in general, arata relatia si interactiunea dintre clase
 si obiecte.
 - Reprezinta un set de "good practices" dupa care se ghideaza scrierea
 de cod in OOP

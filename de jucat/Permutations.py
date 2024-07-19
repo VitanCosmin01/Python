@@ -11,3 +11,4 @@ def allpermutations(str):
 if __name__ == "__main__":
     str = input("Enter you string: ")
     allpermutations(str)
+

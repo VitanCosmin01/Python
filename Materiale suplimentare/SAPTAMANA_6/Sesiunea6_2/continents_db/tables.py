@@ -144,29 +144,29 @@ Add at least 10 countries, as diverse as possible (INSERT). Examples:
 8.	Write a SQL statement that groups all countries by continents, and counts them.
 """
 
-# cursor.execute(
-#     """
-#     SELECT continents.continent_name, COUNT(countries.country_name)
-#     FROM countries
-#     INNER JOIN continents ON countries.continent_id = continents.continent_id
-#     GROUP BY continents.continent_name;
-#     """
-# )
-# print(cursor.fetchall())
-
-"""
-9.	Write a SQL statement that groups all countries by continent, and computes the total population per continent (SUM).
-"""
-
 cursor.execute(
     """
-    SELECT continents.continent_name, SUM(countries.population)
+    SELECT continents.continent_name, COUNT(countries.country_name)
     FROM countries
     INNER JOIN continents ON countries.continent_id = continents.continent_id
     GROUP BY continents.continent_name;
     """
 )
 print(cursor.fetchall())
+
+"""
+9.	Write a SQL statement that groups all countries by continent, and computes the total population per continent (SUM).
+"""
+
+# cursor.execute(
+#     """
+#     SELECT continents.continent_name, SUM(countries.population)
+#     FROM countries
+#     INNER JOIN continents ON countries.continent_id = continents.continent_id
+#     GROUP BY continents.continent_name;
+#     """
+# )
+# print(cursor.fetchall())
 
 connection.commit()
 connection.cursor()

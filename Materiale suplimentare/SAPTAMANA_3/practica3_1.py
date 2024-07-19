@@ -78,11 +78,14 @@ get_numbers(2, 6)
 # functie cu parametri care nu returneaza nimic
 
 # functie cu 1 singur argument/parametru
-# def print_hi(user):
-#     print(f"Hi, {user}")
-#
-# print_hi('Andy87')
-# print_hi('Andrei')
+
+
+def print_hi(user):
+    print(f"Hi, {user}")
+
+
+print_hi('Andy87')
+print_hi('Andrei')
 
 # functie cu parametri care nu returneaza nimic
 
