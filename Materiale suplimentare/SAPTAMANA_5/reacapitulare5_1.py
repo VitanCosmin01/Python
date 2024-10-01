@@ -49,7 +49,7 @@ class Dreptunghi:
 
     def afiseaza_arie(self):
         arie = self.__calculeaza_arie()
-        print(f"aria este {arie}")
+        print(f"Aria este {arie}")
 
 
 dreptunghi1 = Dreptunghi(2, 3)

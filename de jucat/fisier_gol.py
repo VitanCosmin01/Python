@@ -291,5 +291,8 @@ print(dog1)  # => cu ajutorul metodei magice sau "dunder method" care reprezinta
 print(Dog.no_of_dogs)
 print(dog2)
 ##########################################
+# FOR LOOP
+for i in range(1, 11):
+    print(f'Number: {i}')
 
 

@@ -74,29 +74,29 @@ Make sure you use the correct ending for the letter’s number (e.g. 1st, 2nd, 3
 # Din libraria string, putem sa ne folosim de variabila asci_uppercase
 # pentru a avea acces la toate literele din alfabet, scrise cu litera mare
 # asci_uppercase este un STRING
-# import string
+import string
 # VARIANTA 1
-# letters = string.ascii_uppercase
-# print(letters)
-# print(type(letters))
-#
-# for letter in letters:
-#     print(letter)
-# for index in range(0, len(letters)):
-#     print(letters[index])
-#     file_name = f"{letters[index]}.txt"
-#     if index == 0 or index == 20:
-#         position = f"{index+1}st"
-#     elif index == 1 or index == 21:
-#         position = f"{index+1}nd"
-#     elif index == 2 or index == 22:
-#         position = f"{index+1}rd"
-#     else:
-#         position = f"{index+1}th"
-#     print(file_name)
-#     with open(file_name, "w") as file:
-#         file.write(f"My name is letter {letters[index]} \n")
-#         file.write(f"I am the {position} letter of the alphabet.\n")
+letters = string.ascii_uppercase
+print(letters)
+print(type(letters))
+
+for letter in letters:
+    print(letter)
+for index in range(0, len(letters)):
+    print(letters[index])
+    file_name = f"{letters[index]}.txt"
+    if index == 0 or index == 20:
+        position = f"{index+1}st"
+    elif index == 1 or index == 21:
+        position = f"{index+1}nd"
+    elif index == 2 or index == 22:
+        position = f"{index+1}rd"
+    else:
+        position = f"{index+1}th"
+    print(file_name)
+    with open(file_name, "w") as file:
+        file.write(f"My name is letter {letters[index]} \n")
+        file.write(f"I am the {position} letter of the alphabet.\n")
 # VARIANTA 2
 
 

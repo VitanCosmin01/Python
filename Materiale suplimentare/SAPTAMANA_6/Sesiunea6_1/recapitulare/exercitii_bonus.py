@@ -22,35 +22,35 @@ Exemple date angajati:
 """
 
 
-class Employee:
-    def __init__(self, id_no, name, salary, department):
-        self.id_no = id_no
-        self.name = name
-        self._salary = salary
-        self.department = department
-
-    def __str__(self):
-        return f'{self.id_no}, {self.name}, {self._salary}, {self.department}!'
-
-    def assign_department(self, new_department):
-        self.department = new_department
-        return f'The new department is: {self.department}!'
-
-    def employee_details(self):
-        return f'Details for are: \nID: {self.id_no}, Name: {self.name}, Salary: {self._salary}, Department: {self.department}'
-
-    def calculate_salary(self, salary, hours_worked):
-        if hours_worked > 50:
-            extra = hours_worked - 50
-            self._salary = self._salary + extra * salary/50
-            return self._salary
-
-
-employee1 = Employee(1, "Vitan Cosmin", 1500, "Logistica")
-print(employee1)
-print(employee1.assign_department("IT"))
-print(employee1.employee_details())
-print(employee1.calculate_salary(1500, 60))
+# class Employee:
+#     def __init__(self, id_no, name, salary, department):
+#         self.id_no = id_no
+#         self.name = name
+#         self._salary = salary
+#         self.department = department
+#
+#     def __str__(self):
+#         return f'{self.id_no}, {self.name}, {self._salary}, {self.department}!'
+#
+#     def assign_department(self, new_department):
+#         self.department = new_department
+#         return f'The new department is: {self.department}!'
+#
+#     def employee_details(self):
+#         return f'Details for are: \nID: {self.id_no}, Name: {self.name}, Salary: {self._salary}, Department: {self.department}'
+#
+#     def calculate_salary(self, salary, hours_worked):
+#         if hours_worked > 50:
+#             extra = hours_worked - 50
+#             self._salary = self._salary + extra * salary/50
+#             return self._salary
+#
+#
+# employee1 = Employee(1, "Vitan Cosmin", 1500, "Logistica")
+# print(employee1)
+# print(employee1.assign_department("IT"))
+# print(employee1.employee_details())
+# print(employee1.calculate_salary(1500, 60))
 
 """
 Clasa MenuItem:
@@ -73,66 +73,66 @@ Clasa Restaurant:
 """
 
 
-class MenuItem:
-
-    def __init__(self, id, nume, ingrediente, cantitate, pret, alergeni, categorie):
-        self.id = id
-        self.nume = nume
-        self.ingrediente = ingrediente
-        self.cantitate = cantitate
-        self.pret = pret
-        self.alergeni = alergeni
-        self.categorie = categorie
-
-    def print_menu_item(self):
-        print(f'ID: {self.id}')
-        print(f'Nume: {self.nume}')
-        print(f'Ingrediente: {', '.join(self.ingrediente)}')
-        print(f'Cantitate kg: {self.cantitate}')
-        print(f'Pret: {self.pret}')
-        print(f'Alergeni: {', '.join(self.alergeni)}')
-        print(f'Categorie: {self.categorie}')
-
-
-item_1 = MenuItem(1, "Pizza Margherita", ["faina", "sos de rosii", "mozarelle"],
-                  1, 24.99, ["gluten", "lactoza"], "Pizza")
-
-item_1.print_menu_item()
-
-
-class Restaurant:
-
-    def __init__(self, nume):
-        self.nume = nume
-        self.menu_items = []  # o lista cu elemente de tip MenuItem
-        self.booked_tables = set()  # set pentru a urmări mesele rezervate
-
-    def add_items_to_menu(self, menu_item):
-        self.menu_items.append(menu_item)  # se adauga noul meniu la lista de meniuri
-
-    def delete_item_from_menu(self, menu_item):
-        if menu_item in self.menu_items:
-            self.menu_items.remove(menu_item)  # se sterge meniul din lista de meniuri
-        else:
-            print(f'{menu_item.nume} nu exista in meniu!')
-
-    def reserve_table(self, table_number):
-        self.booked_tables.add(table_number)
-
-    def print_menu(self):
-        print(f'Meniu pentru restaurantul {self.nume}:')
-        for item in self.menu_items:
-            item.print_menu_item()
-
-    def print_booked_tables(self):
-        print(f'Mesele rezervate la restaurantul {self.nume}: {', '.join(map(str, self.booked_tables))} mese!')
-
-
-restaurant_1 = Restaurant("Pizza Bella")
-restaurant_1.add_items_to_menu(item_1)
-restaurant_1.reserve_table(5)
-restaurant_1.print_menu()
-restaurant_1.print_booked_tables()
+# class MenuItem:
+#
+#     def __init__(self, id, nume, ingrediente, cantitate, pret, alergeni, categorie):
+#         self.id = id
+#         self.nume = nume
+#         self.ingrediente = ingrediente
+#         self.cantitate = cantitate
+#         self.pret = pret
+#         self.alergeni = alergeni
+#         self.categorie = categorie
+#
+#     def print_menu_item(self):
+#         print(f'ID: {self.id}')
+#         print(f'Nume: {self.nume}')
+#         print(f'Ingrediente: {', '.join(self.ingrediente)}')
+#         print(f'Cantitate kg: {self.cantitate}')
+#         print(f'Pret: {self.pret}')
+#         print(f'Alergeni: {', '.join(self.alergeni)}')
+#         print(f'Categorie: {self.categorie}')
+#
+#
+# item_1 = MenuItem(1, "Pizza Margherita", ["faina", "sos de rosii", "mozarelle"],
+#                   1, 24.99, ["gluten", "lactoza"], "Pizza")
+#
+# item_1.print_menu_item()
+#
+#
+# class Restaurant:
+#
+#     def __init__(self, nume):
+#         self.nume = nume
+#         self.menu_items = []  # o lista cu elemente de tip MenuItem
+#         self.booked_tables = set()  # set pentru a urmări mesele rezervate
+#
+#     def add_items_to_menu(self, menu_item):
+#         self.menu_items.append(menu_item)  # se adauga noul meniu la lista de meniuri
+#
+#     def delete_item_from_menu(self, menu_item):
+#         if menu_item in self.menu_items:
+#             self.menu_items.remove(menu_item)  # se sterge meniul din lista de meniuri
+#         else:
+#             print(f'{menu_item.nume} nu exista in meniu!')
+#
+#     def reserve_table(self, table_number):
+#         self.booked_tables.add(table_number)
+#
+#     def print_menu(self):
+#         print(f'Meniu pentru restaurantul {self.nume}:')
+#         for item in self.menu_items:
+#             item.print_menu_item()
+#
+#     def print_booked_tables(self):
+#         print(f'Mesele rezervate la restaurantul {self.nume}: {', '.join(map(str, self.booked_tables))} mese!')
+#
+#
+# restaurant_1 = Restaurant("Pizza Bella")
+# restaurant_1.add_items_to_menu(item_1)
+# restaurant_1.reserve_table(5)
+# restaurant_1.print_menu()
+# restaurant_1.print_booked_tables()
 """
 3. Clasa BankAccount
 
@@ -148,35 +148,35 @@ restaurant_1.print_booked_tables()
 """
 
 
-class BankAccount:
-
-    def __init__(self, account_number, customer_name):
-        self.account_number = account_number
-        self.balance = 0
-        self.customer_name = customer_name
-
-    def deposit(self, amount):
-        if amount > 0:
-            self.balance += amount
-            print(f'Depozitat: {amount}. Sold nou: {self.balance}')
-        else:
-            print("Suma de depozit trebuie sa fie pozitiva!")
-
-    def withdraw(self,amount):
-        if 0 < amount <= self.balance:
-            self.balance -= amount
-            print(f'Retras: {amount}. Sold nou: {self.balance}')
-        else:
-            print("Sold insuficient sau suma invalida.")
-
-    def check_balance(self):
-        return self.balance
-
-
-account_1 = BankAccount("123456789", "Gheorghe Vasile")
-account_1.deposit(150)
-account_1.withdraw(30)
-print(f'Sold curent: {account_1.check_balance()}')
+# class BankAccount:
+#
+#     def __init__(self, account_number, customer_name):
+#         self.account_number = account_number
+#         self.balance = 0
+#         self.customer_name = customer_name
+#
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.balance += amount
+#             print(f'Depozitat: {amount}. Sold nou: {self.balance}')
+#         else:
+#             print("Suma de depozit trebuie sa fie pozitiva!")
+#
+#     def withdraw(self,amount):
+#         if 0 < amount <= self.balance:
+#             self.balance -= amount
+#             print(f'Retras: {amount}. Sold nou: {self.balance}')
+#         else:
+#             print("Sold insuficient sau suma invalida.")
+#
+#     def check_balance(self):
+#         return self.balance
+#
+#
+# account_1 = BankAccount("123456789", "Gheorghe Vasile")
+# account_1.deposit(150)
+# account_1.withdraw(30)
+# print(f'Sold curent: {account_1.check_balance()}')
 
 """
 4. Implementeaza un decorator care converteste rezultatul returnat de
@@ -229,20 +229,4 @@ Pentru alte exercitii extra:
 # print(next(i_nums))
 
 
-def my_gen():
-    n = 1
-    print('This is printed first')
 
-    # Generator function contains yield statements
-    yield n
-
-    n += 1
-    print("This is printed second")
-    yield n
-
-    n += 1
-    print('This is printed at last')
-    yield n
-
-
-my_gen()
