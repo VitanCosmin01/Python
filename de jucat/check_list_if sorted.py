@@ -13,7 +13,7 @@ class TestSortedAscending(unittest.TestCase):
     # Define a test method 'test_sorted_list' to test a sorted list.
     def test_sorted_list(self):
         # Uncomment one of the 'lst' lines for testing a sorted or unsorted list.
-        #lst = [5, 7, 2, 8, 1, 9]
+        # lst = [5, 7, 2, 8, 1, 9]
         lst = [1, 2, 3, 4, 5, 6, 7]
         print("Sorted list: ", lst)
         # Assert that the list is sorted in ascending order.

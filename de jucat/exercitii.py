@@ -295,4 +295,12 @@ print(dog2)
 for i in range(1, 11):
     print(f'Number: {i}')
 
+##############################################
+x = 5
+def add():
+    x = 3
+    x = x + 5
+    print(x)
 
+add()
+print(x)

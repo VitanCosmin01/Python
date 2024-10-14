@@ -1,7 +1,7 @@
 # pip install countryinfo
 from countryinfo import CountryInfo
 
-country = CountryInfo(input("enter country name: "))
+country = CountryInfo(input("Enter country name: "))
 
 print("Country name: ", country.name().capitalize())
 print("Country capital: ", country.capital())
